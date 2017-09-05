@@ -1,0 +1,17 @@
+{
+  "name": "elevate",
+  "version": "1.0.0",
+  "description": "elevateUSA style",
+  "main": "index.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/keli5466/ElevateUSA.git"
+},
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kelly",
+  "license": "ISC"
+}
