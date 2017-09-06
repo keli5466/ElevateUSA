@@ -2,6 +2,7 @@ $orange: #E8773D;
 $navy: #2D383A;
 $gotham : Gotham Rounded;
 $baron: Baron Neue;
+$lightgrey: #EBEBEB;
 body{
   color: $orange;
 }
@@ -36,6 +37,34 @@ nav#top-menu-nav{
 }
 .et_vertical_nav {
 ul#top-menu{
+  .social_icons{
+    background-color: transparent;
+    position: relative;
+    width: 7em;
+    padding-left: 0;
+    margin: 1.2em 0;
+    a{
+
+
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      max-height: 2em;
+      // max-width: 10%;
+
+      transform: translate(-50%,-50%);
+    }
+  }
+  }
+  .donate{
+    width: 13em;
+
+    background-color: $lightgrey;
+    a{
+      color: black;
+    }
+  }
   li{
     background-color: $orange;
     text-transform: uppercase;
@@ -49,7 +78,7 @@ ul#top-menu{
     line-height: 2em;
     width: 20em;
     &:nth-child(1) {
-      width: 31em;
+      width: 13em;
     }
     &:nth-child(2) {
       width: 15em;
