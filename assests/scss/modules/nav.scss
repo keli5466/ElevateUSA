@@ -1,0 +1,93 @@
+$orange: #E8773D;
+$navy: #2D383A;
+$gotham : Gotham Rounded;
+$baron: Baron Neue;
+body{
+  color: $orange;
+}
+h1{
+  color: green;
+  padding: 10%;
+  font-size: blue;
+}
+.hero {
+  h1{
+    color: white;
+  }
+  h2{
+    color: white;
+  }
+}.et_vertical_nav #et-main-area, .et_vertical_nav #top-header{
+  margin-left: 7em !important;
+
+}
+div#top-header{
+  display: none;
+}
+header#main-header{
+  background-color: $navy;
+  width: 7em !important;
+  .container.clearfix.et_menu_container{
+    margin: 0;
+  }
+}
+nav#top-menu-nav{
+  margin-top: 6em;
+}
+.et_vertical_nav {
+ul#top-menu{
+  li{
+    background-color: $orange;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: .2em 0em;
+    height: 2.5em;
+    font-family: $gotham;
+    padding-left: 7.5em;
+    width: 100%;
+    padding-right: .5em;
+    line-height: 2em;
+    width: 20em;
+    &:nth-child(1) {
+      width: 31em;
+    }
+    &:nth-child(2) {
+      width: 15em;
+    }
+    &:nth-child(3) {
+      width: 15em;
+    }
+    &:nth-child(4) {
+      width: 18em;
+    }
+    &:nth-child(5) {
+      width: 16em;
+    }
+    &:nth-child(6) {
+          width: 19em;
+    }
+    &:nth-child(7) {
+            width: 18em;
+    }
+    &:nth-child(8) {
+      width: 13em;
+    }
+    &:nth-child(9) {
+      width: 15em;
+    }
+
+    position: relative;
+    a{
+      position: absolute;
+      top: 50%;
+      color: white;
+      margin-left: 7em;
+// left: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+  }
+}
+}

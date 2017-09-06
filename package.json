@@ -4,11 +4,24 @@
   "description": "elevateUSA style",
   "main": "index.js",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/keli5466/ElevateUSA.git"
-},
-  "dependencies": {},
-  "devDependencies": {},
+    "type": "git",
+    "url": "https://github.com/keli5466/ElevateUSA.git"
+  },
+  "dependencies": {
+    "gulp-install": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-partials-imported": "^1.0.5",
+    "gulp-sourcemaps": "^2.6.1",
+    "run-sequence": "^2.1.0",
+    "sassdoc": "^2.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
