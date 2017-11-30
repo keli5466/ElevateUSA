@@ -1,0 +1,67 @@
+
+.hero {
+	.header-content {
+		margin: 0 auto;
+		padding: 0;
+		width: 100%!important;
+		display: flex;
+	 flex-flow: column;
+		max-width: 100%!important;
+		  justify-content: center;
+
+		img{
+			width: 15em;
+			margin-bottom: 5em;
+			position: absolute;
+			top: 5%;
+			left: -7%;
+			@include bp(phone-tablet){
+				display: none;
+			}
+		}
+
+		h1 {
+			color: white;
+			font-family: $baron;
+		}
+		@include bp(desktop-tablet ){
+
+		@keyframes typing {
+			from { width: 0 }
+	  to { width: 100% }
+		}
+
+		@keyframes blink-caret {
+			from, to {
+				border-color: transparent
+			}
+
+			50% {
+				border-color: $orange
+			}
+		}
+
+		.typewrite {
+			overflow: hidden;
+			border-right: 2px solid $orange;
+			white-space: nowrap;
+			margin: 0 auto;
+
+			animation:
+			typing 3.5s steps(30, end),
+			blink-caret 1.5s step-end infinite;
+
+		}
+	}
+	.typewrite {
+		font-family: $alpha!important;
+		@extend .heading1;
+		color: white;
+	}
+
+		h2 {
+			color: white;
+		}
+
+	}
+}

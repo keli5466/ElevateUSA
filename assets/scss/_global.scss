@@ -1,0 +1,102 @@
+.orange{
+	color: $orange !important;
+}
+.et_pb_equal_columns{
+	@include bp(tablet){
+		display: flex;
+	}
+}
+.hidden{
+	visibility: hidden;
+}
+.bg_navy{
+	background-color: $navy!important;
+
+}
+.bg_orange{
+	background-color: $orange!important;
+}
+.white{
+	color:white;
+}
+.navy{
+	color:$navy;
+}
+#page-container{
+	overflow: hidden;
+}
+.alpha {
+	font-family: $alpha;
+}
+
+.gotham {
+	font-family: $gotham;
+}
+
+.baron{
+	font-family: $baron;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.inner_page_header{
+	height: 50vh;
+}
+li{
+	list-style: none;
+}
+b{
+	font-family: $roundedmeduim;
+}
+.heading1 {
+	font-size: 70px;
+	line-height: 1.4em;
+	@include bp(phone-tablet) {
+		font-size: 40px;
+	}
+}
+.smaller_h1{
+	font-size: 55px;
+}
+.heading2 {
+	font-size: 40px;
+	line-height: 1.4em;
+	@include bp(tablet) {
+		font-size: 36px;
+	}
+	@include bp(phone){
+		font-size: 25px;
+	}
+
+}
+
+.heading3 {
+	font-size: 30px;
+	line-height: 1.4em;
+	@include bp(phone-tablet) {
+		font-size: 26px;
+	}
+}
+
+.heading4 {
+	font-size: 25px;
+	@include bp(tablet) {
+		font-size: 18px;
+	}
+	@include bp(phone){
+		font-size: 16px;
+	}
+}
+.heading5 {
+	font-size: 20px;
+	@include bp(phone-tablet) {
+		font-size: 20px;
+	}
+}
+.heading6 {
+	font-size: 16px;
+	@include bp(phone-tablet) {
+		font-size: 14px;
+	}
+}

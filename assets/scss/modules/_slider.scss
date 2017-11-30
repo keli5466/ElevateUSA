@@ -1,0 +1,73 @@
+.et_pb_slides .et_pb_empty_slide{
+	display: table!important;
+}
+.custom_slider{
+	@include bp(phone){
+		display: none;
+	}
+	.et_pb_slide {
+		 .et_pb_empty_slide .et_pb_slider_container_inner,.et_pb_slider_container_inner{
+			 display: table-cell;
+			 position: absolute;
+			 bottom: 15%;
+			 right: 0%;
+		 }
+	    // padding: 15%;
+			height: 100vh;
+			@include bp(tablet){
+				height: 60vh;
+			}
+			position: relative;
+			.et_pb_container.clearfix {
+				// min-height: 608px;
+position: relative;
+// bottom: 20%;
+// transform: translate(0%,-2a0%);
+// left: 15%;
+			}
+	.et_pb_slide_description{
+		padding: 0%;
+		margin: auto 0;
+		text-align: right;
+	h1{
+		@extend .heading2;
+		font-family: $baron;
+		text-transform: lowercase;
+		text-align: right;
+		line-height: 1em;
+		span{
+			font-family: $alpha;
+			text-decoration: underline;
+			@extend .heading1;
+			line-height: 1em;
+		}
+	}
+	}
+	.et_pb_button{
+		background-color: $orange;
+		text-align: center;
+		margin-top: 3em;
+		// float: right;
+	}
+}
+	.et-pb-controllers{
+		position: absolute;
+	z-index: 10;
+	bottom: 5%;
+	right: 15%;
+	width: auto;
+		text-align: right;
+		a{
+			height: 1em;
+			width: 1em;
+			background-color: white;
+			text-indent: 9999px;
+		}
+		.et-pb-active-control{
+			background-color: $orange!important;
+		}
+
+	}
+
+
+}

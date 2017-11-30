@@ -2,29 +2,37 @@
   "name": "elevate",
   "version": "1.0.0",
   "description": "elevateUSA style",
-  "main": "index.js",
+  "license": "GPL-2.0",
+  "author": "kelly",
   "repository": {
     "type": "git",
     "url": "https://github.com/keli5466/ElevateUSA.git"
   },
   "dependencies": {
-    "gulp-install": "^1.1.0"
+    "imagemin-optipng": "^5.2.1",
+    "jpegtran-bin": "^3.2.0",
+    "jquery-circle-progress": "^1.2.2",
+    "notify-send": "^0.1.2",
+    "optipng": "^1.1.0",
+    "readable-stream": "^2.3.3"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cached": "^1.1.1",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-install": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-partials-imported": "^1.0.5",
-    "gulp-sourcemaps": "^2.6.1",
-    "run-sequence": "^2.1.0",
-    "sassdoc": "^2.3.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "kelly",
-  "license": "ISC"
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-filter": "^4.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sort": "^2.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-wp-pot": "^1.2.2",
+    "imagemin": "^5.3.1"
+  }
 }

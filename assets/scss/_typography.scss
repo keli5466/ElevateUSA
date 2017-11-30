@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'AlphaMack AOE';
+    src: url('AlphaMackAOE.eot');
+    src: url('AlphaMackAOE.eot?#iefix') format('embedded-opentype'),
+        url('AlphaMackAOE.woff2') format('woff2'),
+        url('AlphaMackAOE.woff') format('woff'),
+        url('AlphaMackAOE.ttf') format('truetype'),
+        url('AlphaMackAOE.svg#AlphaMackAOE') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baron Neue';
+    src: url('BaronNeueBlack.eot');
+    src: url('BaronNeueBlack.eot?#iefix') format('embedded-opentype'),
+        url('BaronNeueBlack.woff2') format('woff2'),
+        url('BaronNeueBlack.woff') format('woff'),
+        url('BaronNeueBlack.ttf') format('truetype'),
+        url('BaronNeueBlack.svg#BaronNeueBlack') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chartwell-Pies';
+    src: url('Chartwell-Pies.eot');
+    src: url('Chartwell-Pies.eot?#iefix') format('embedded-opentype'),
+        url('Chartwell-Pies.woff2') format('woff2'),
+        url('Chartwell-Pies.woff') format('woff'),
+        url('Chartwell-Pies.ttf') format('truetype'),
+        url('Chartwell-Pies.svg#Chartwell-Pies') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Gotham Rounded Book';
+//     src: url('GothamRounded-Book.eot');
+//     src: url('GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
+//         url('GothamRounded-Book.woff2') format('woff2'),
+//         url('GothamRounded-Book.woff') format('woff'),
+//         url('GothamRounded-Book.ttf') format('truetype'),
+//         url('GothamRounded-Book.svg#GothamRounded-Book') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+body {
+	font-family: $gotham;
+	font-style: normal;
+	font-weight: 500;
+	color: $navy;
+	font-size: 1rem;
+	@include bp(phone){
+		font-size: .7rem;
+	}
+}
+
+h1 {
+	font-size: 70px;
+	line-height: 1.4em;
+	@include bp(phone-tablet) {
+		font-size: 40px;
+	}
+	// @include bp(phone){
+	// 	font-size: 35px;
+	// }
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 1.4em;
+	h2{
+		margin-bottom: .5em;
+	}
+	@include bp(tablet) {
+		font-size: 36px;
+	}
+	@include bp(phone){
+		font-size: 25px;
+	}
+
+}
+
+h3 {
+	font-size: 30px;
+		line-height: 1.4em;
+		@include bp(phone-tablet) {
+			font-size: 26px;
+		}
+}
+
+h4 {
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 1.2em;
+	@include bp(phone-tablet) {
+		font-size: 18px;
+	}
+}
+
+h5 {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2em;
+	@include bp(phone-tablet) {
+		font-size: 20px;
+	}
+}
+
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+		line-height: 1.7em;
+		@include bp(phone-tablet) {
+			font-size: 14px;
+		}
+}
+.et_pb_column_1_3 h1,
+.et_pb_column_1_4 h1 {
+	// @extend h1;
+}
+
+.et_pb_column_1_3 h2,
+.et_pb_column_1_4 h2 {
+	// @extend h2;
+}
