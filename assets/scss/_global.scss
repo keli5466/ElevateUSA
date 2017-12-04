@@ -1,3 +1,38 @@
+
+.et_pb_row{
+	width: 85%!important;
+}
+.popup {
+ display:none; /*hidden on pageload*/
+ width: 100vw;
+ height: 100%;
+ position: absolute;
+ padding-right: 20%;
+ left: 0;
+ z-index: 9;
+ top: 0;
+ background-color: #f2f2f2;
+ .et_pb_code_inner{
+	 position: inherit;
+
+ .close{
+	 position: absolute;
+	 left: -10%;
+	 font-size: 3em;
+	 font-weight: 100;
+	 color: grey;
+ }
+}
+ .new_wrap{
+	 padding: 5% 0%;
+height: 100%;
+display: block;
+width: 100%;
+ }
+
+}
+
+
 .orange{
 	color: $orange !important;
 }

@@ -19,6 +19,8 @@ function scripts_and_styles() {
  wp_enqueue_script( 'jquery-mousewheel' );
 	 wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js' );
 		wp_enqueue_script('jquery');
+		wp_register_script( 'e-custom', get_stylesheet_directory_uri() . '/e-custom.js' );
+		 wp_enqueue_script('e-custom');
 	}
 
 		add_action( 'wp_enqueue_scripts', 	'scripts_and_styles');

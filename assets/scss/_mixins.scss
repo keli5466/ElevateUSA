@@ -39,6 +39,31 @@
 	transform: translate(-$left,-$top);
 
 }
+// @mixin bp($class) {
+//   @if $class == xs {
+//     @media (max-width: 630px) { @content; }
+//   }
+//
+//   @else if $class == s {
+//     @media (min-width: 630px) { @content; }
+//   }
+//
+//   @else if $class == m {
+//     @media (min-width: 992px) { @content; }
+//   }
+//
+//   @else if $class == l {
+//     @media (min-width: 1024px) { @content; }
+//   }
+// 	@else if $class == xl {
+// 		@media (min-width: 1324px) { @content; }
+// 	}
+//
+//   @else {
+//     @warn "Breakpoint mixin supports: xs, sm, md, lg";
+//   }
+// }
+
 
 // Media Queries
 @mixin bp($point, $min: false, $max: false) {
@@ -48,7 +73,7 @@
 	@else if $point == tablet {
 		@media(min-width: 630px) and (max-width: 1075px) { @content; }
 	}
-	@else if $point == desktop-tablet {
+	@else if $point == M {
 		@media(min-width: 630px) { @content; }
 	}
 	@else if $point == mediumLandscape{

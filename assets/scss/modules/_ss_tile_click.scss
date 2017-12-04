@@ -1,0 +1,176 @@
+.chart span{
+	color: $navy;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.info_guy {
+	.side_blurbs {
+		width: 39%;
+		margin: 0 auto;
+	}
+
+	.main_img {
+		width: 15%;
+		padding: 0 1%;
+		margin: 0 3%;
+	}
+
+
+	.right {
+		float: right;
+		.info_wrap {
+			.et_pb_blurb_content {
+				.et_pb_blurb_container {
+					right: 0;
+					top: 0;
+				}
+
+				.et_pb_main_blurb_image {
+					left: 0;
+					top: 0;
+					// padding: 5%;
+				}
+			}
+
+			&.down {
+				.et_pb_main_blurb_image {
+					&:after {
+						content: "";
+						position: absolute;
+						border-top: 3px solid white;
+						width: 3em;
+						transform: rotate(-25deg);
+						// transform-origin: 0 0;
+						left: -10%;
+						bottom: 30%;
+					}
+				}
+			}
+
+			&.up {
+				.et_pb_main_blurb_image {
+					&:after {
+						content: "";
+						position: absolute;
+						border-top: 3px solid white;
+						width: 3em;
+						transform: rotate(25deg);
+						// transform-origin: 0 0;
+						left: -10%;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.left {
+		float: left;
+		.info_wrap {
+			.et_pb_blurb_content {
+				.et_pb_blurb_container {
+					left: 0;
+					top: 0;
+				}
+
+				.et_pb_main_blurb_image {
+					right: 0;
+					top: 0;
+					// padding: 5%;
+				}
+
+			}
+
+			&.down {
+				.et_pb_main_blurb_image {
+					&:after {
+						content: "";
+						position: absolute;
+						border-top: 3px solid white;
+						width: 3em;
+						transform: rotate(25deg);
+						// transform-origin: 0 0;
+						right: -10%;
+						bottom: 30%;
+					}
+				}
+			}
+
+			&.up {
+				.et_pb_main_blurb_image {
+					&:after {
+						content: "";
+						position: absolute;
+						border-top: 3px solid white;
+						width: 3em;
+						transform: rotate(-25deg);
+						// transform-origin: 0 0;
+						right: -10%;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.info_wrap {
+		margin: 0;
+		// padding: 0;
+		// width: 100%;
+		display: block;
+		height: 10em;
+
+		.et_pb_blurb_content {
+			position: relative;
+			height: 100%;
+			// width: 80%;
+
+			.et_pb_blurb_container {
+				width: 60%;
+				position: absolute;
+			}
+
+			.et_pb_main_blurb_image {
+				// float: right;
+				width: 40%;
+				padding: 0 5%;
+				position: absolute;
+
+				img {
+					// width: 100%;
+					height: 5em;
+				}
+			}
+
+			p {
+				color: white;
+			}
+		}
+	}
+}
+
+.tile_click {
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.tab-content {
+	display: none;
+	// background: #ededed;
+	// padding: 15px;
+	.et_pb_text {
+		padding-left: 2%;
+		columns: 2;
+		column-fill: balance;
+
+		p {
+			font-size: 12px;
+		}
+	}
+}
+
+.tab-content.current {
+	display: inherit;
+}

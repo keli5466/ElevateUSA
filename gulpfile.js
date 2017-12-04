@@ -55,8 +55,8 @@ var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 
 // JS Custom related.
 var jsCustomSRC             = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
-var jsCustomDestination     = './assets/js/'; // Path to place the compiled JS custom scripts file.
-var jsCustomFile            = 'custom'; // Compiled JS custom file name.
+var jsCustomDestination     = './'; // Path to place the compiled JS custom scripts file.
+var jsCustomFile            = 'e-custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
 // Images related.
@@ -116,15 +116,16 @@ var filter       = require('gulp-filter'); // Enables you to work on a subset of
 var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
-var reload       = browserSync.reload; // For manual browser reload.
+var reload       = browserSync.reload;
+// For manual browser reload.
 var wpPot        = require('gulp-wp-pot'); // For generating the .pot file.
 var sort         = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
 
 
 
-var notify = require("gulp-notify");
-gulp.src("./src/test.ext")
-  .pipe(notify("Hello Gulp!"));
+// var notify = require("gulp-notify");
+// gulp.src("./src/test.ext")
+//   .pipe(notify("Hello Gulp!"));
 
 /**
  * Task: `browser-sync`.
@@ -137,7 +138,7 @@ gulp.src("./src/test.ext")
  *    3. You may define a custom port
  *    4. You may want to stop the browser from openning automatically
  */
-gulp.task( 'browser-sync', function() {
+gulp.task( 'browserSync', function() {
   browserSync.init( {
 
     // For more options
@@ -149,13 +150,14 @@ gulp.task( 'browser-sync', function() {
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
     open: true,
+		  notify: false,
 
     // Inject CSS changes.
     // Commnet it to reload browser for every CSS change.
-    injectChanges: true,
+    // injectChanges: true,
 
     // Use a specific port (instead of the one auto-detected by Browsersync).
-    // port: 7000,
+    port: 3000,
 
   } );
 });
@@ -209,7 +211,7 @@ gulp.task( 'browser-sync', function() {
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
-    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) );
  });
 
 
@@ -224,20 +226,20 @@ gulp.task( 'browser-sync', function() {
   *     3. Renames the JS file with suffix .min.js
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
- gulp.task( 'vendorsJs', function() {
-  gulp.src( jsVendorSRC )
-    .pipe( concat( jsVendorFile + '.js' ) )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( rename( {
-      basename: jsVendorFile,
-      suffix: '.min'
-    }))
-    .pipe( uglify() )
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
- });
+ // gulp.task( 'vendorsJs', function() {
+ //  gulp.src( jsVendorSRC )
+ //    .pipe( concat( jsVendorFile + '.js' ) )
+ //    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ //    .pipe( gulp.dest( jsVendorDestination ) )
+ //    .pipe( rename( {
+ //      basename: jsVendorFile,
+ //      suffix: '.min'
+ //    }))
+ //    .pipe( uglify() )
+ //    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ //    .pipe( gulp.dest( jsVendorDestination ) )
+ //    .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
+ // });
 
 
  /**
@@ -280,17 +282,17 @@ gulp.task( 'browser-sync', function() {
   * This task will run only once, if you want to run it
   * again, do it with the command `gulp images`.
   */
- gulp.task( 'images', function() {
-  gulp.src( imagesSRC )
-    .pipe( imagemin( {
-          progressive: true,
-          optimizationLevel: 3, // 0-7 low-high
-          interlaced: true,
-          svgoPlugins: [{removeViewBox: false}]
-        } ) )
-    .pipe(gulp.dest( imagesDestination ))
-    .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
- });
+ // gulp.task( 'images', function() {
+ //  gulp.src( imagesSRC )
+ //    .pipe( imagemin( {
+ //          progressive: true,
+ //          optimizationLevel: 3, // 0-7 low-high
+ //          interlaced: true,
+ //          svgoPlugins: [{removeViewBox: false}]
+ //        } ) )
+ //    .pipe(gulp.dest( imagesDestination ))
+ //    .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
+ // });
 
 
  /**
@@ -302,21 +304,21 @@ gulp.task( 'browser-sync', function() {
   *     3. Applies wpPot with the variable set at the top of this file
   *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
   */
- gulp.task( 'translate', function () {
-     return gulp.src( projectPHPWatchFiles )
-         .pipe(sort())
-         .pipe(wpPot( {
-             domain        : text_domain,
-             destFile      : translationFile,
-             package       : packageName,
-             bugReport     : bugReport,
-             lastTranslator: lastTranslator,
-             team          : team
-         } ))
-        .pipe(gulp.dest(translationDestination))
-        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
-
- });
+ // gulp.task( 'translate', function () {
+ //     return gulp.src( projectPHPWatchFiles )
+ //         .pipe(sort())
+ //         .pipe(wpPot( {
+ //             domain        : text_domain,
+ //             destFile      : translationFile,
+ //             package       : packageName,
+ //             bugReport     : bugReport,
+ //             lastTranslator: lastTranslator,
+ //             team          : team
+ //         } ))
+ //        .pipe(gulp.dest(translationDestination))
+ //        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) );
+ //
+ // });
 
 
  /**
@@ -324,9 +326,8 @@ gulp.task( 'browser-sync', function() {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+ gulp.task( 'default', ['styles', 'customJS', 'browserSync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
-  gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });

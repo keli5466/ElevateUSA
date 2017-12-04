@@ -1,50 +1,3 @@
-@font-face {
-    font-family: 'AlphaMack AOE';
-    src: url('AlphaMackAOE.eot');
-    src: url('AlphaMackAOE.eot?#iefix') format('embedded-opentype'),
-        url('AlphaMackAOE.woff2') format('woff2'),
-        url('AlphaMackAOE.woff') format('woff'),
-        url('AlphaMackAOE.ttf') format('truetype'),
-        url('AlphaMackAOE.svg#AlphaMackAOE') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Baron Neue';
-    src: url('BaronNeueBlack.eot');
-    src: url('BaronNeueBlack.eot?#iefix') format('embedded-opentype'),
-        url('BaronNeueBlack.woff2') format('woff2'),
-        url('BaronNeueBlack.woff') format('woff'),
-        url('BaronNeueBlack.ttf') format('truetype'),
-        url('BaronNeueBlack.svg#BaronNeueBlack') format('svg');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Chartwell-Pies';
-    src: url('Chartwell-Pies.eot');
-    src: url('Chartwell-Pies.eot?#iefix') format('embedded-opentype'),
-        url('Chartwell-Pies.woff2') format('woff2'),
-        url('Chartwell-Pies.woff') format('woff'),
-        url('Chartwell-Pies.ttf') format('truetype'),
-        url('Chartwell-Pies.svg#Chartwell-Pies') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-// @font-face {
-//     font-family: 'Gotham Rounded Book';
-//     src: url('GothamRounded-Book.eot');
-//     src: url('GothamRounded-Book.eot?#iefix') format('embedded-opentype'),
-//         url('GothamRounded-Book.woff2') format('woff2'),
-//         url('GothamRounded-Book.woff') format('woff'),
-//         url('GothamRounded-Book.ttf') format('truetype'),
-//         url('GothamRounded-Book.svg#GothamRounded-Book') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
 
 body {
 	font-family: $gotham;
@@ -60,7 +13,7 @@ body {
 h1 {
 	font-size: 70px;
 	line-height: 1.4em;
-	@include bp(phone-tablet) {
+	@include bp(S) {
 		font-size: 40px;
 	}
 	// @include bp(phone){
@@ -86,7 +39,7 @@ h2 {
 h3 {
 	font-size: 30px;
 		line-height: 1.4em;
-		@include bp(phone-tablet) {
+		@include bp(S) {
 			font-size: 26px;
 		}
 }
@@ -95,7 +48,7 @@ h4 {
 	font-size: 25px;
 	font-weight: 400;
 	line-height: 1.2em;
-	@include bp(phone-tablet) {
+	@include bp(S) {
 		font-size: 18px;
 	}
 }
@@ -104,7 +57,7 @@ h5 {
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.2em;
-	@include bp(phone-tablet) {
+	@include bp(S) {
 		font-size: 20px;
 	}
 }
@@ -114,7 +67,7 @@ p {
 	font-size: 16px;
 	font-weight: 400;
 		line-height: 1.7em;
-		@include bp(phone-tablet) {
+		@include bp(S) {
 			font-size: 14px;
 		}
 }
