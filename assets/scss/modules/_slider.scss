@@ -48,6 +48,9 @@ position: relative;
 		text-align: center;
 		margin-top: 3em;
 		// float: right;
+		&:hover{
+			background-color: $navy;
+		}
 	}
 }
 	.et-pb-controllers{
@@ -58,8 +61,8 @@ position: relative;
 	width: auto;
 		text-align: right;
 		a{
-			height: 1em;
-			width: 1em;
+			height: .7em;
+			width: .7em;
 			background-color: white;
 			text-indent: 9999px;
 		}

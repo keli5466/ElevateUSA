@@ -1,6 +1,28 @@
 
 jQuery(function($) {
 
+	function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function typeWrite(span){
+  var text = $('.typewrite').text();
+  var randInt = 0;
+  for (var i = 0; i < text.length; i++) {
+    randInt += parseInt(randomIntFromInterval(40,300));
+    var typing = setTimeout(function(y){
+      $('#'+span).append(text.charAt(y));
+    },randInt, i);
+  }
+}
+
+$(document).ready(function(){
+  typeWrite('.typewrite');
+});
+
+
+
 	$(".no_row").each(function(i) {
 		 $(this).attr('data-id', i);
 	});
@@ -187,10 +209,12 @@ var item;
 	owl.owlCarousel({
 
 	    nav:true,
+			 // navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+			    smartSpeed :900,
 	    // margin:10,
 			items:1,
-			rewindNav: false,
-			    rtl:true,
+			dots:true,
+			// rewindNav: false,
 
 
 
@@ -212,14 +236,14 @@ function prev(){
 owl.bind('mousewheel', function () {
     // console.log(new Date().getTime());
 });
-	owl.on('mousewheel', '.owl-stage', function (e) {
-	        if (e.deltaY < 0) {
-											 	setTimeout(next, 600);
-	        } else {
-	          setTimeout(prev, 600);
-	        }
-					 // e.preventDefault();
-	      });
+	// owl.on('mousewheel', '.owl-stage', function (e) {
+	//         if (e.deltaY < 0) {
+	// 										 	setTimeout(next, 600);
+	//         } else {
+	//           setTimeout(prev, 600);
+	//         }
+	// 				 // e.preventDefault();
+	//       });
 
 
 	});

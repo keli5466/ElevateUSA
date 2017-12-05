@@ -1,103 +1,62 @@
-// .btn{
-// // width: 30px;
-//
-// 	&--orange{
-// 		background-color: $orange!important;
-// 	}
-//
-// }
-//
-// .et_pb_button, .et_pb_button:hover{
-// 	font-family: $gotham;
-// 	text-transform: uppercase;
-// 	color: white!important;
-// 	border: none!important;
-// 	border-radius: 0px;
-// 	padding: .2em 1em!important;
-// 	.btn{
-// 	// width: 30px;
-//
-// 		&--orange{
-// 			background-color: $orange!important;
-// 		}
-// 	}
-//
-// }
-.et_pb_button{
+.et_pb_button {
 	font-family: $gotham;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	color: white!important;
 	border: none!important;
-	border-radius: 0px;
+	border-radius: 0;
 	@extend .heading6;
 	font-weight: bold;
-	padding: .2em 2em!important;
-	@include bp(phone-tablet){
-		font-size: 16px;
+	padding: 0.35em 1.3em 0.2em;
+	&:hover{
+		padding: 0.35em 1.3em 0.2em!important;
 	}
-&.et_pb_bg_layout_light{
-background-color: $navy!important;
 
-}
-&.et_pb_bg_layout_dark{
-	background-color: $orange!important;
-}
-
-&:hover{
-	&.et_pb_bg_layout_light{
-	background-color: $orange!important;
-
-	}
-	&.et_pb_bg_layout_dark{
+	&.et_pb_bg_layout_light {
 		background-color: $navy!important;
 	}
-	&:after{
-		opacity: 0;
-	}
-}
-&.btn_border{
-	&.et_pb_bg_layout_light{
-	background-color: $navy!important;
-	// border:2px solid $orange!important;
 
-	}
-	&.et_pb_bg_layout_dark{
+	&.et_pb_bg_layout_dark {
 		background-color: $orange!important;
-			// border:2px solid $navy!important;
 	}
 
-	&:hover{
-		&.et_pb_bg_layout_light{
-		background-color: white!important;
-			// border:2px solid $navy!important;
-			color:$navy!important;
-
+	&:hover {
+		&.et_pb_bg_layout_light {
+			background-color: $orange!important;
 		}
-		&.et_pb_bg_layout_dark{
-			background-color: white!important;
-			color:$orange!important;
+
+		&.et_pb_bg_layout_dark {
+			background-color: $navy!important;
+		}
+
+		&:after {
+			opacity: 0;
+		}
+	}
+
+	&.btn_border {
+		&.et_pb_bg_layout_light {
+			background-color: $navy!important;
 			// border:2px solid $orange!important;
 		}
+
+		&.et_pb_bg_layout_dark {
+			background-color: $orange!important;
+			// border:2px solid $navy!important;
+		}
+
+		&:hover {
+			padding: 0.35em 1.3em 0.2em;
+			&.et_pb_bg_layout_light {
+				background-color: white!important;
+				// border:2px solid $navy!important;
+				color: $navy!important;
+			}
+
+			&.et_pb_bg_layout_dark {
+				background-color: white!important;
+				color: $orange!important;
+				// border:2px solid $orange!important;
+			}
+		}
+	}
 }
-}
-}
-// .et_pb_button, .et_pb_button:hover{
-// 	font-family: $gotham;
-// 	text-transform: uppercase;
-// 	color: white!important;
-// 	border: none!important;
-// 	border-radius: 0px;
-// 	@extend .heading6;
-// 	font-weight: bold;
-// 	padding: .2em 2em!important;
-// 	@include bp(phone-tablet){
-// 		font-size: 16px;
-// 	}
-// &.et_pb_bg_layout_light{
-// background-color: $navy!important;
-//
-// }
-// &.et_pb_bg_layout_dark{
-// 	background-color: $orange!important;
-// }
-// }

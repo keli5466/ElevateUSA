@@ -154,7 +154,7 @@ gulp.task( 'browserSync', function() {
 
     // Inject CSS changes.
     // Commnet it to reload browser for every CSS change.
-    // injectChanges: true,
+    injectChanges: true,
 
     // Use a specific port (instead of the one auto-detected by Browsersync).
     port: 3000,
@@ -328,6 +328,6 @@ gulp.task( 'browserSync', function() {
   */
  gulp.task( 'default', ['styles', 'customJS', 'browserSync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+  gulp.watch( styleWatchFiles, [ 'styles', reload  ] ); // Reload on SCSS file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });

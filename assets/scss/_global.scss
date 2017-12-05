@@ -1,3 +1,31 @@
+// .owl-prev {
+//     width: 15px;
+//     height: 100px;
+//     position: absolute;
+//     top: 40%;
+//     margin-left: -20px;
+//     display: block!important;
+//     border:0px solid black;
+// }
+//
+// .owl-next {
+//     width: 15px;
+//     height: 100px;
+//     position: absolute;
+//     top: 40%;
+//     right: -25px;
+//     display: block!important;
+//     border:0px solid black;
+// }
+// .owl-prev i, .owl-next i {
+// 	transform : scale(1,6); color: #ccc;
+// }
+#stats{
+	.et_pb_blurb{
+		padding: 5%;
+
+	}
+}
 
 .et_pb_row{
 	width: 85%!important;
@@ -83,55 +111,4 @@ li{
 }
 b{
 	font-family: $roundedmeduim;
-}
-.heading1 {
-	font-size: 70px;
-	line-height: 1.4em;
-	@include bp(phone-tablet) {
-		font-size: 40px;
-	}
-}
-.smaller_h1{
-	font-size: 55px;
-}
-.heading2 {
-	font-size: 40px;
-	line-height: 1.4em;
-	@include bp(tablet) {
-		font-size: 36px;
-	}
-	@include bp(phone){
-		font-size: 25px;
-	}
-
-}
-
-.heading3 {
-	font-size: 30px;
-	line-height: 1.4em;
-	@include bp(phone-tablet) {
-		font-size: 26px;
-	}
-}
-
-.heading4 {
-	font-size: 25px;
-	@include bp(tablet) {
-		font-size: 18px;
-	}
-	@include bp(phone){
-		font-size: 16px;
-	}
-}
-.heading5 {
-	font-size: 20px;
-	@include bp(phone-tablet) {
-		font-size: 20px;
-	}
-}
-.heading6 {
-	font-size: 16px;
-	@include bp(phone-tablet) {
-		font-size: 14px;
-	}
 }

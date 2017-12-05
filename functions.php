@@ -4,6 +4,7 @@ function theme_enqueue_scripts() {
     //FIRST
     wp_enqueue_style( 'divi-style', get_template_directory_uri() . '/style.css' );
 
+		wp_enqueue_style( 'jquery-fullpage', get_stylesheet_directory_uri() . '/jquery.fullpage.css' );
 
     wp_enqueue_style( 'elevate-style', get_stylesheet_directory_uri() . '/style.css', array( 'divi-style' ) );
 }

@@ -10,9 +10,9 @@ body {
 	}
 }
 
-h1 {
-	font-size: 70px;
-	line-height: 1.4em;
+h1  {
+	font-size: 60px;
+	line-height: 1em;
 	@include bp(S) {
 		font-size: 40px;
 	}
@@ -23,7 +23,7 @@ h1 {
 
 h2 {
 	font-size: 40px;
-	line-height: 1.4em;
+	line-height: 1.1em;
 	h2{
 		margin-bottom: .5em;
 	}
@@ -64,7 +64,7 @@ h5 {
 
 
 p {
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 400;
 		line-height: 1.7em;
 		@include bp(S) {
@@ -79,4 +79,58 @@ p {
 .et_pb_column_1_3 h2,
 .et_pb_column_1_4 h2 {
 	// @extend h2;
+}
+
+
+
+.heading1 {
+	font-size: 60px;
+	line-height: 1em;
+	@include bp(phone-tablet) {
+		font-size: 40px;
+	}
+}
+.smaller_h1{
+	font-size: 55px;
+}
+.heading2 {
+	font-size: 40px;
+	line-height: 1.1em;
+	@include bp(tablet) {
+		font-size: 36px;
+	}
+	@include bp(phone){
+		font-size: 25px;
+	}
+
+}
+
+.heading3 {
+	font-size: 30px;
+	line-height: 1.4em;
+	@include bp(phone-tablet) {
+		font-size: 26px;
+	}
+}
+
+.heading4 {
+	font-size: 25px;
+	@include bp(tablet) {
+		font-size: 18px;
+	}
+	@include bp(phone){
+		font-size: 16px;
+	}
+}
+.heading5 {
+	font-size: 20px;
+	@include bp(phone-tablet) {
+		font-size: 20px;
+	}
+}
+.heading6 {
+	font-size: 14px;
+	@include bp(phone-tablet) {
+		font-size: 13px;
+	}
 }

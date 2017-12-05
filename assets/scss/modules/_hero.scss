@@ -10,7 +10,7 @@
 		  justify-content: center;
 
 		img{
-			width: 15em;
+			width: 12em;
 			margin-bottom: 5em;
 			position: absolute;
 			top: 5%;
@@ -20,39 +20,39 @@
 			}
 		}
 
+
+
 		h1 {
 			color: white;
 			font-family: $baron;
 		}
-		@include bp(desktop-tablet ){
+
 
 		@keyframes typing {
-			from { width: 0 }
-	  to { width: 100% }
-		}
+	  from { width: 0 }
+	  to { width: 8em; }
+	}
 
-		@keyframes blink-caret {
-			from, to {
-				border-color: transparent
-			}
+	@keyframes blink-caret {
+	  from, to { border-color: transparent }
+	  50% { border-color: $orange }
+	}
 
-			50% {
-				border-color: $orange
-			}
-		}
-
-		.typewrite {
+		.typewrite{
 			overflow: hidden;
 			border-right: 2px solid $orange;
 			white-space: nowrap;
 			margin: 0 auto;
 
+			// animation: typing 4s steps(40) 1s 1 normal both,
+			// 			blink-caret 500ms steps(40) infinite normal;
+
 			animation:
-			typing 3.5s steps(30, end),
+			typing 3.5s steps(30),
 			blink-caret 1.5s step-end infinite;
 
 		}
-	}
+
 	.typewrite {
 		font-family: $alpha!important;
 		@extend .heading1;

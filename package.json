@@ -9,6 +9,7 @@
     "url": "https://github.com/keli5466/ElevateUSA.git"
   },
   "dependencies": {
+    "fullpage.js": "^2.9.5",
     "imagemin-optipng": "^5.2.1",
     "jpegtran-bin": "^3.2.0",
     "jquery-circle-progress": "^1.2.2",

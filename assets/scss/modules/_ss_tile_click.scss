@@ -1,6 +1,6 @@
 .chart span{
 	color: $navy;
-	font-size: 50px;
+	font-size: 65px;
 	font-weight: bold;
 }
 
@@ -161,13 +161,15 @@
 	// background: #ededed;
 	// padding: 15px;
 	.et_pb_text {
-		padding-left: 2%;
+		.col_wrapper{
+		// padding-left: 2%;
 		columns: 2;
 		column-fill: balance;
 
 		p {
 			font-size: 12px;
 		}
+	}
 	}
 }
 
