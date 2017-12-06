@@ -49,9 +49,12 @@ div#et-top-navigation{
 			background-color: $lightgrey;
 
 			a {
-				color: $navy!important;
+				color: $navy;
 				text-align: center;
 				border-bottom: none;
+				&:hover{
+					color: white!important;
+				}
 			}
 		}
 
@@ -124,7 +127,16 @@ div#et-top-navigation{
 
 					a {
 						color: $navy!important;
+							&:hover {
+										color: white!important;
+							}
 					}
+					// &:hover {
+					// 	background-color: $navy;
+					// 	a{
+					// 		color: white!important;
+					// 	}
+					// }
 				}
 
 				li.current-menu-item {
@@ -179,12 +191,10 @@ div#et-top-navigation{
 					}
 
 					&:nth-child(8) {
-						width: 8em;
+						width: 10em;
 					}
 
-					&:nth-child(9) {
-						width: 9em;
-					}
+
 					position: relative;
 
 					a {
@@ -200,9 +210,19 @@ div#et-top-navigation{
 							opacity: 1;
 						}
 					}
+					&:last-child {
+						width: 10em;
+						&:hover {
+							background-color: $navy;
+							a{
+								color: white;
+							}
+						}
+					}
 
 					&:hover {
 						background-color: $navy;
+								color: white!important;
 					}
 				}
 			}

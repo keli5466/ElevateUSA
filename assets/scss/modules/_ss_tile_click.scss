@@ -155,7 +155,15 @@
 	padding: 10px 15px;
 	cursor: pointer;
 }
+@keyframes lineh {
+	from{
+		line-height: 1.2em;
+	}
+	to{
+		line-height: 1.5em;
+	}
 
+}
 .tab-content {
 	display: none;
 	// background: #ededed;
@@ -165,10 +173,15 @@
 		// padding-left: 2%;
 		columns: 2;
 		column-fill: balance;
+		// line-height: 1.2em;
+font-size: 14px;
+	line-height: 1.2em;
+&:hover{
+		// line-height: 1.5em;
+			line-height: 1.5em;
+		// animation: .5s lineh .5s ease-in-out;
+}
 
-		p {
-			font-size: 12px;
-		}
 	}
 	}
 }

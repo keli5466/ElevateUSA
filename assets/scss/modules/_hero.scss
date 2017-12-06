@@ -26,7 +26,7 @@
 			color: white;
 			font-family: $baron;
 		}
-
+@include bp(M){
 
 		@keyframes typing {
 	  from { width: 0 }
@@ -43,16 +43,17 @@
 			border-right: 2px solid $orange;
 			white-space: nowrap;
 			margin: 0 auto;
+			max-width: 8em;
 
-			// animation: typing 4s steps(40) 1s 1 normal both,
-			// 			blink-caret 500ms steps(40) infinite normal;
+			animation: typing 4s steps(40) 1s 1 normal both,
+						blink-caret 500ms steps(40) infinite normal;
 
-			animation:
-			typing 3.5s steps(30),
-			blink-caret 1.5s step-end infinite;
+			// animation:
+			// typing 3.5s steps(40),
+			// blink-caret 1.5s step-end infinite;
 
 		}
-
+}
 	.typewrite {
 		font-family: $alpha!important;
 		@extend .heading1;

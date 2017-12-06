@@ -73,9 +73,8 @@ var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 // Browsers you care about for autoprefixing.
 // Browserlist https        ://github.com/ai/browserslist
 const AUTOPREFIXER_BROWSERS = [
-    'last 2 versions',
+    'last 2 version',
     '> 1%',
-		'last 2 Chrome versions',
     'ie >= 9',
     'ie_mob >= 10',
     'ff >= 30',
@@ -116,16 +115,9 @@ var filter       = require('gulp-filter'); // Enables you to work on a subset of
 var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
-var reload       = browserSync.reload;
-// For manual browser reload.
+var reload       = browserSync.reload; // For manual browser reload.
 var wpPot        = require('gulp-wp-pot'); // For generating the .pot file.
 var sort         = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
-
-
-
-// var notify = require("gulp-notify");
-// gulp.src("./src/test.ext")
-//   .pipe(notify("Hello Gulp!"));
 
 /**
  * Task: `browser-sync`.
@@ -138,7 +130,7 @@ var sort         = require('gulp-sort'); // Recommended to prevent unnecessary c
  *    3. You may define a custom port
  *    4. You may want to stop the browser from openning automatically
  */
-gulp.task( 'browserSync', function() {
+gulp.task( 'browser-sync', function() {
   browserSync.init( {
 
     // For more options
@@ -150,14 +142,13 @@ gulp.task( 'browserSync', function() {
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
     open: true,
-		  notify: false,
 
     // Inject CSS changes.
     // Commnet it to reload browser for every CSS change.
     injectChanges: true,
 
     // Use a specific port (instead of the one auto-detected by Browsersync).
-    port: 3000,
+    // port: 7000,
 
   } );
 });
@@ -211,7 +202,7 @@ gulp.task( 'browserSync', function() {
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
-    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) );
+    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
  });
 
 
@@ -240,7 +231,7 @@ gulp.task( 'browserSync', function() {
  //    .pipe( gulp.dest( jsVendorDestination ) )
  //    .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
  // });
-
+ //
 
  /**
   * Task: `customJS`.
@@ -282,17 +273,17 @@ gulp.task( 'browserSync', function() {
   * This task will run only once, if you want to run it
   * again, do it with the command `gulp images`.
   */
- // gulp.task( 'images', function() {
- //  gulp.src( imagesSRC )
- //    .pipe( imagemin( {
- //          progressive: true,
- //          optimizationLevel: 3, // 0-7 low-high
- //          interlaced: true,
- //          svgoPlugins: [{removeViewBox: false}]
- //        } ) )
- //    .pipe(gulp.dest( imagesDestination ))
- //    .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
- // });
+ gulp.task( 'images', function() {
+  gulp.src( imagesSRC )
+    .pipe( imagemin( {
+          progressive: true,
+          optimizationLevel: 3, // 0-7 low-high
+          interlaced: true,
+          svgoPlugins: [{removeViewBox: false}]
+        } ) )
+    .pipe(gulp.dest( imagesDestination ))
+    .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
+ });
 
 
  /**
@@ -304,21 +295,21 @@ gulp.task( 'browserSync', function() {
   *     3. Applies wpPot with the variable set at the top of this file
   *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
   */
- // gulp.task( 'translate', function () {
- //     return gulp.src( projectPHPWatchFiles )
- //         .pipe(sort())
- //         .pipe(wpPot( {
- //             domain        : text_domain,
- //             destFile      : translationFile,
- //             package       : packageName,
- //             bugReport     : bugReport,
- //             lastTranslator: lastTranslator,
- //             team          : team
- //         } ))
- //        .pipe(gulp.dest(translationDestination))
- //        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) );
- //
- // });
+ gulp.task( 'translate', function () {
+     return gulp.src( projectPHPWatchFiles )
+         .pipe(sort())
+         .pipe(wpPot( {
+             domain        : text_domain,
+             destFile      : translationFile,
+             package       : packageName,
+             bugReport     : bugReport,
+             lastTranslator: lastTranslator,
+             team          : team
+         } ))
+        .pipe(gulp.dest(translationDestination))
+        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ));
+
+ });
 
 
  /**
@@ -326,8 +317,8 @@ gulp.task( 'browserSync', function() {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', ['styles', 'customJS', 'browserSync'], function () {
+ gulp.task( 'default', ['styles', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, [ 'styles', reload  ] ); // Reload on SCSS file changes.
+  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });

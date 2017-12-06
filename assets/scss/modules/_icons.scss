@@ -33,6 +33,19 @@ h4{
 	text-transform: uppercase;
 }
 }
+.st0{
+	fill:none;
+	stroke:white;
+	stroke-width:1.8;
+	stroke-linecap:round;
+	stroke-linejoin:round;}
+.st1{
+	fill:#2C383A;
+	stroke:white;
+	stroke-width:1.8;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+}
 
 
 .cls-1{
@@ -178,7 +191,7 @@ cls-1{fill:none;}
 
 .hats{
 
-.cls-1{fill:none;stroke:#2c383a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;}
+.st0{fill:none;stroke:#2c383a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;}
 
 @keyframes fly {
   0%   {transform: scale(1, 1)
