@@ -84,6 +84,7 @@
 				text-align: center;
 				@include bp(desktop){
 					flex: 1;
+padding-bottom: 0;
 					&:first-child {
 						padding-left: 0;
 					}

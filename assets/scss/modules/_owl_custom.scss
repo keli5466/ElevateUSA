@@ -23,7 +23,7 @@
 .owl-item.active{
 	p.active{
 		// color: $orange;
-		animation: .5s change .5s ease infinite;
+		animation: .5s change .5s ease both;
 	}
 }
 @keyframes change {

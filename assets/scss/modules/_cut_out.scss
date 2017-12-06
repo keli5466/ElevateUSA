@@ -28,6 +28,11 @@ padding: 0% !important;
 
 		.et_pb_column_2_3 {
 			width: 55%;
+			position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+
 			// padding: 5% 0 9%;
 			.icon{
 				padding-bottom: 0;
@@ -45,7 +50,7 @@ padding: 0% !important;
 			// 	flex-flow: row wrap;
 			// }
 			.et_pb_blurb {
-				max-width: 25%;
+				width: 20%;
 				text-align: center;
 				@include bp(phone) {
 					max-width: 50%;
@@ -74,6 +79,7 @@ padding: 0% !important;
 					img {
 						max-height: 5em;
 						line-height: 5em;
+						height: 100%;
 					}
 				}
 
@@ -132,6 +138,7 @@ padding: 0% !important;
 			bottom: 0;
 			width: 45%;
 			right: 0;
+			padding: 0;
 			@include bp(phone-tablet) {
 				display: none;
 			}
