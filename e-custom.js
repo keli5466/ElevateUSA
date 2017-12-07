@@ -200,7 +200,18 @@ $('#FL').click(function(event){
 
 
 jQuery(function($) {
+	$(document).ready(function() {
+		$('.social-feed-text').appendTo('.name');
+});
 		$(document).ready(function() {
+			$('.social-feed-text').appendTo('.name');
+			$('.social-feed-text').each(function() {
+			  $(this).appendTo('.name');
+					// $(this).attr('id', i);
+
+			});
+
+
 			var winHeight = $(window).height();
 			  $('.owl-controls').css({ 'height': winHeight});
 

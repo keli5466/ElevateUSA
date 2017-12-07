@@ -93,8 +93,8 @@ p{font-size:15px;font-weight:400;line-height:1.7em}
 .dots-list{width:100%}
 .dots-list ol{position:relative;counter-reset:li;list-style:none !important}
 .dots-list ol li{position:relative;margin-top:1.5em;padding-left:3em;padding-top:.2em;line-height:2em}
-.dots-list ol li:before{content:"";background:#e8773d;position:absolute;width:.25em;top:2em;left:1em;height:100%}
-.dots-list ol li:after{content:counter(li,decimal-leading-zero);counter-increment:li;height:2em;width:2em;border:.1em solid #e8773d;border-radius:50%;color:black;background:white;text-align:center;position:absolute;left:0;top:0}
+.dots-list ol li:before{content:"";background:#e8773d;position:absolute;width:.22em;top:2em;left:1em;height:100%}
+.dots-list ol li:after{content:counter(li,decimal-leading-zero);counter-increment:li;height:2em;width:2em;border:.16em solid #e8773d;border-radius:50%;color:black;font-weight:700;background:white;text-align:center;position:absolute;left:0;top:0}
 .dots-list ol li:last-child:before{content:"";background:transparent}
 .time_line{margin:0;padding:0 !important}
 .time_line .et_pb_column:nth-child(2){width:5% !important;margin:0;padding:0 5%}
@@ -118,45 +118,37 @@ g.State:hover .pin{-webkit-transition:.3s ease-in;transition:.3s ease-in}
 g.State:hover .bg_state{fill-opacity:.3;-webkit-transition:.3s ease-in;transition:.3s ease-in}
 g.State:hover .state_name{opacity:1;-webkit-transition:.3s ease-in;transition:.3s ease-in}
 .icon_blurb{max-width:100%;margin:0 auto}
+.icon_blurb .white{stroke:#fff}
+.icon_blurb .navy{stroke:#2c383a}
+.icon_blurb .fill_white{fill:white}
+.icon_blurb .fill_navy{fill:navy}
+.icon_blurb .st0{fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
 .icon_blurb svg{text-align:center;margin:2em auto;max-height:5em;line-height:5em}
 .icon_blurb svg img{max-height:5em;line-height:5em}
 .icon_blurb h1{text-transform:uppercase;font-weight:500;font-family:"Gotham Rounded Book";color:white;text-align:center}
 .icon_blurb h4{text-align:center;text-transform:uppercase}
-.st0{fill:none;stroke:white;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.st1{fill:#2c383a;stroke:white;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.cls-1{fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}
-.small_gear{-webkit-transform:rotateZ(0);-ms-transform:rotate(0);transform:rotateZ(0);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform 2s}
-.big_gear{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotateZ(0);-ms-transform:rotate(0);transform:rotateZ(0);-webkit-transition:-webkit-transform 2s}
-.icon_gear:hover .small_gear{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotateZ(50deg);-ms-transform:rotate(50deg);transform:rotateZ(50deg);-webkit-transition:-webkit-transform 2s}
-.icon_gear:hover .big_gear{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotateZ(-50deg);-ms-transform:rotate(-50deg);transform:rotateZ(-50deg);-webkit-transition:-webkit-transform 2s}
-.smile .cls-1{fill:none;stroke-miterlimit:10}
-.smile .cls-1,.smile .cls-2{stroke:white;stroke-width:1.8px}
-.smile .cls-2{fill:white;stroke-linecap:round;stroke-linejoin:round}
-.smile .mouth{-webkit-transition:-webkit-transform .5s;-webkit-transition:ease .5s;transition:ease .5s;stroke-width:1}
-.smile:hover path.mouth{stroke-width:8}
-.ribbon g{display:inline-block;-webkit-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}
-.ribbon:hover g{-webkit-animation:wobble-bottom .5s 1 ease-in-out;animation:wobble-bottom .5s 1 ease-in-out}
-.ribbon .cls-1{fill:none;stroke:white;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}
-.ribbon .cls-2{fill:white}
-.threepeople .cls-1{fill:none;stroke:white;stroke-miterlimit:10;stroke-width:1.8px}
-.threepeople .cls-1 line{-webkit-transition:ease .5s;transition:ease .5s}
-.threepeople:hover .line{stroke-dasharray:50;-webkit-transition:ease .5s;transition:ease .5s;-webkit-animation:dash 7s linear infinite;animation:dash 7s linear infinite}
-.city cls-1{fill:none}
-.city .cls-1,.city .cls-2,.city .cls-3{stroke:#2c383a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}
-.city .cls-2{fill:#fff}
-.city .cls-3{fill:#2c383a}
-.city:hover .bird{-webkit-animation:fly-bird .4s ease infinite;animation:fly-bird .4s ease infinite;-webkit-transform-origin:left center;-ms-transform-origin:left center;transform-origin:left center}
-.hats .st0{fill:none;stroke:#2c383a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px}
+#flag .st0{fill:none;stroke:#2c383a;stroke-width:1.8;stroke-miterlimit:10}
+#flag .flag_move{-webkit-transition:d .35s;transition:d .35s}
+#flag:hover .flag_move{-webkit-animation:flag .5s ease-out infinite;animation:flag .5s ease-out infinite}
 .hats g:nth-child(3){-webkit-transform:rotateZ(0) translateY(0);-ms-transform:rotate(0) translateY(0);transform:rotateZ(0) translateY(0);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .2s}
 .hats g:nth-child(4){-webkit-transform:rotateZ(0) translateY(0);-ms-transform:rotate(0) translateY(0);transform:rotateZ(0) translateY(0);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .2s}
 .hats g:nth-child(5){-webkit-transform:rotateZ(0) translateY(0);-ms-transform:rotate(0) translateY(0);transform:rotateZ(0) translateY(0);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform .2s}
 .hats:hover g:nth-child(3){-webkit-transform:rotateZ(2deg) translateY(-2px);-ms-transform:rotate(2deg) translateY(-2px);transform:rotateZ(2deg) translateY(-2px);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:ease .2s;transition:ease .2s;-webkit-transition:-webkit-transform .2s}
 .hats:hover g:nth-child(4){-webkit-transform:rotateZ(-10deg) translateY(-11px);-ms-transform:rotate(-10deg) translateY(-11px);transform:rotateZ(-10deg) translateY(-11px);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:ease .2s;transition:ease .2s;-webkit-transition:-webkit-transform .2s}
 .hats:hover g:nth-child(5){-webkit-transform:rotateZ(30deg) translateY(-10px);-ms-transform:rotate(30deg) translateY(-10px);transform:rotateZ(30deg) translateY(-10px);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:ease .2s;transition:ease .2s;-webkit-transition:-webkit-transform .2s}
-#flag .flag_move{-webkit-transition:d .35s;transition:d .35s}
-#flag:hover .flag_move{-webkit-animation:flag .5s ease-out infinite;animation:flag .5s ease-out infinite}
+.city:hover .bird{-webkit-animation:fly-bird .4s ease infinite;animation:fly-bird .4s ease infinite;-webkit-transform-origin:left center;-ms-transform-origin:left center;transform-origin:left center}
+.character g{-webkit-transition:ease .5s;transition:ease .5s;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%}
+.character:hover g{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}
+.ribbon g{display:inline-block;-webkit-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}
+.ribbon:hover g{-webkit-animation:wobble-bottom .5s 1 ease-in-out;animation:wobble-bottom .5s 1 ease-in-out}
+.small_gear{-webkit-transform:rotateZ(0);-ms-transform:rotate(0);transform:rotateZ(0);-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transition:-webkit-transform 2s}
+.big_gear{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotateZ(0);-ms-transform:rotate(0);transform:rotateZ(0);-webkit-transition:-webkit-transform 2s}
+.icon_gear:hover .small_gear{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotateZ(50deg);-ms-transform:rotate(50deg);transform:rotateZ(50deg);-webkit-transition:-webkit-transform 2s}
+.icon_gear:hover .big_gear{-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-transform:rotateZ(-50deg);-ms-transform:rotate(-50deg);transform:rotateZ(-50deg);-webkit-transition:-webkit-transform 2s}
+.threepeople .st0 line{-webkit-transition:ease .5s;transition:ease .5s}
+.threepeople:hover .line{stroke-dasharray:50;-webkit-transition:ease .5s;transition:ease .5s;-webkit-animation:dash 7s linear infinite;animation:dash 7s linear infinite}
 .popup{display:none;width:100vw !important;height:100%;position:absolute;padding-right:20%;left:0;z-index:9;top:0;background-color:#f2f2f2}
-.popup .et_pb_code{position:absolute;right:-30%;text-align:center;top:-10%}
+.popup .et_pb_code{position:absolute;right:-50%;text-align:center;top:-10%;width:100%}
 .popup .et_pb_code .close{font-size:3em;font-weight:100;color:grey}
 .popup .new_wrap{padding:5% 0;height:100%;display:block;width:80%}
 .tile_hover{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -314,7 +306,7 @@ h2{font-size:36px}
 .et_vertical_nav header#main-header ul#top-menu .donate a:hover{color:white !important}
 .et_vertical_nav header#main-header ul#top-menu li.current-menu-item{background:#2d383a}
 .et_vertical_nav header#main-header ul#top-menu li.current-menu-item a{color:white !important}
-.et_vertical_nav header#main-header ul#top-menu li{background-color:#e8773d;text-transform:uppercase;margin:.2em 0;height:2.5em;font-family:"Gotham Rounded Book";padding-left:3.5em;width:100%;line-height:2em;width:20em;position:relative}
+.et_vertical_nav header#main-header ul#top-menu li{background-color:#e8773d;text-transform:uppercase;margin:.2em 0;height:2.5em;font-weight:bolder;font-family:"Gotham Rounded Book";padding-left:3.5em;width:100%;line-height:2em;width:20em;position:relative}
 .et_vertical_nav header#main-header ul#top-menu li .current_page_item{background-color:black}
 .et_vertical_nav header#main-header ul#top-menu li:nth-child(1){width:8em}
 .et_vertical_nav header#main-header ul#top-menu li:nth-child(2){width:10em}
@@ -367,22 +359,12 @@ h2{font-size:25px}
 to{color:#e8773d}
 }@keyframes change{from{color:white}
 to{color:#e8773d}
-}@-webkit-keyframes wobble-bottom{25%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
-50%{-webkit-transform:skew(2deg);transform:skew(2deg)}
-75%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
-100%{-webkit-transform:skew(0);transform:skew(0)}
-}@keyframes wobble-bottom{25%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
-50%{-webkit-transform:skew(2deg);transform:skew(2deg)}
-75%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
-100%{-webkit-transform:skew(0);transform:skew(0)}
-}@-webkit-keyframes dash{to{stroke-dashoffset:1000}
-}@keyframes dash{to{stroke-dashoffset:1000}
-}@-webkit-keyframes fly-bird{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
-50%{-webkit-transform:scale(1,1.3) translateY(-2px);transform:scale(1,1.3) translateY(-2px)}
-100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
-}@keyframes fly-bird{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
-50%{-webkit-transform:scale(1,1.3) translateY(-2px);transform:scale(1,1.3) translateY(-2px)}
-100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
+}@-webkit-keyframes flag{0%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
+50%{d:path("M56.8,12.5c5.9,3.8,8.8-2.4,14.7,1.4c0-3.6,0-5.5,0-9.1C65.6,1,62.7,7.2,56.8,3.4C56.8,7,56.8,8.9,56.8,12.5")}
+100%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
+}@keyframes flag{0%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
+50%{d:path("M56.8,12.5c5.9,3.8,8.8-2.4,14.7,1.4c0-3.6,0-5.5,0-9.1C65.6,1,62.7,7.2,56.8,3.4C56.8,7,56.8,8.9,56.8,12.5")}
+100%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
 }@-webkit-keyframes fly{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
 50%{-webkit-transform:scale(1.1) rotateZ(-40deg) translateY(-10px);transform:scale(1.1) rotateZ(-40deg) translateY(-10px)}
 100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
@@ -401,12 +383,26 @@ to{color:#e8773d}
 }@keyframes fly2{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
 50%{-webkit-transform:scale(1.5,1.3) translateY(-18px);transform:scale(1.5,1.3) translateY(-18px)}
 100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
-}@-webkit-keyframes flag{0%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
-50%{d:path("M56.8,12.5c5.9,3.8,8.8-2.4,14.7,1.4c0-3.6,0-5.5,0-9.1C65.6,1,62.7,7.2,56.8,3.4C56.8,7,56.8,8.9,56.8,12.5")}
-100%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
-}@keyframes flag{0%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
-50%{d:path("M56.8,12.5c5.9,3.8,8.8-2.4,14.7,1.4c0-3.6,0-5.5,0-9.1C65.6,1,62.7,7.2,56.8,3.4C56.8,7,56.8,8.9,56.8,12.5")}
-100%{d:path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5")}
+}@-webkit-keyframes fly-bird{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
+50%{-webkit-transform:scale(1,1.3) translateY(-2px);transform:scale(1,1.3) translateY(-2px)}
+100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
+}@keyframes fly-bird{0%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
+50%{-webkit-transform:scale(1,1.3) translateY(-2px);transform:scale(1,1.3) translateY(-2px)}
+100%{-webkit-transform:scale(1,1) translateY(0);transform:scale(1,1) translateY(0)}
+}@-webkit-keyframes spin{from{-webkit-transform:rotate(0);transform:rotate(0)}
+to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}@keyframes spin{from{-webkit-transform:rotate(0);transform:rotate(0)}
+to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}@-webkit-keyframes wobble-bottom{25%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
+50%{-webkit-transform:skew(2deg);transform:skew(2deg)}
+75%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
+100%{-webkit-transform:skew(0);transform:skew(0)}
+}@keyframes wobble-bottom{25%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
+50%{-webkit-transform:skew(2deg);transform:skew(2deg)}
+75%{-webkit-transform:skew(-2deg);transform:skew(-2deg)}
+100%{-webkit-transform:skew(0);transform:skew(0)}
+}@-webkit-keyframes dash{to{stroke-dashoffset:1000}
+}@keyframes dash{to{stroke-dashoffset:1000}
 }@-webkit-keyframes lineh{from{line-height:1.2em}
 to{line-height:1.5em}
 }@keyframes lineh{from{line-height:1.2em}

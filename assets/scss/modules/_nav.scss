@@ -1,20 +1,16 @@
-//
-// .et_pb_row{
-// 	float: right;
-// 	width: 85% !important;
-//     max-width: 85% !important;
-// }
 
 .et_vertical_fixed.admin-bar #page-container #main-header {
 	top: 0;
 }
-.et_vertical_nav #page-container #main-header{
 
+.et_vertical_nav #page-container #main-header {
 	padding-top: 0!important;
 }
-div#et-top-navigation{
+
+div#et-top-navigation {
 	padding-top: 0!important;
 }
+
 #main-header {
 	background-color: $navy!important;
 
@@ -52,7 +48,8 @@ div#et-top-navigation{
 				color: $navy;
 				text-align: center;
 				border-bottom: none;
-				&:hover{
+
+				&:hover {
 					color: white!important;
 				}
 			}
@@ -102,6 +99,7 @@ div#et-top-navigation{
 
 			ul#top-menu {
 				margin-top: 9em;
+
 				.social_icons {
 					background-color: transparent;
 					position: relative;
@@ -127,16 +125,11 @@ div#et-top-navigation{
 
 					a {
 						color: $navy!important;
-							&:hover {
-										color: white!important;
-							}
+
+						&:hover {
+							color: white!important;
+						}
 					}
-					// &:hover {
-					// 	background-color: $navy;
-					// 	a{
-					// 		color: white!important;
-					// 	}
-					// }
 				}
 
 				li.current-menu-item {
@@ -155,6 +148,7 @@ div#et-top-navigation{
 					text-transform: uppercase;
 					margin: 0.2em 0;
 					height: 2.5em;
+					font-weight: bolder;
 					font-family: $gotham;
 					padding-left: 3.5em;
 					width: 100%;
@@ -193,8 +187,6 @@ div#et-top-navigation{
 					&:nth-child(8) {
 						width: 10em;
 					}
-
-
 					position: relative;
 
 					a {
@@ -210,11 +202,14 @@ div#et-top-navigation{
 							opacity: 1;
 						}
 					}
+
 					&:last-child {
 						width: 10em;
+
 						&:hover {
 							background-color: $navy;
-							a{
+
+							a {
 								color: white;
 							}
 						}
@@ -222,7 +217,7 @@ div#et-top-navigation{
 
 					&:hover {
 						background-color: $navy;
-								color: white!important;
+						color: white!important;
 					}
 				}
 			}

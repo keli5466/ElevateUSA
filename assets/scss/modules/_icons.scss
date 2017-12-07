@@ -1,310 +1,293 @@
-
-.icon_blurb{
+.icon_blurb {
 	max-width: 100%;
 	margin: 0 auto;
-	// float: left;
 
-	// @include bp(phone-tablet) {
-	// 	max-width: 45%;
-	// }
+	.white {
+		stroke: #FFFFFF;
+	}
+
+	.navy {
+		stroke: #2C383A;
+	}
+
+	.fill_white {
+		fill: white;
+	}
+
+	.fill_navy {
+		fill: navy;
+	}
+
+	.st0 {
+		fill: none;
+		stroke-width: 1.8;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-miterlimit: 10;
+	}
+
 	svg {
-	// margin-bottom: 5em;
-	// max-width: 60px;
-	// transition: .3s ease-in-out;
-	text-align: center;
-	margin: 2em auto;
-	max-height: 5em;
-	line-height: 5em;
-	img{
+		text-align: center;
+		margin: 2em auto;
 		max-height: 5em;
 		line-height: 5em;
+
+		img {
+			max-height: 5em;
+			line-height: 5em;
+		}
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-weight: 500;
+		@extend .heading6;
+		font-family: $gotham;
+		color: white;
+		text-align: center;
+	}
+
+	h4 {
+		text-align: center;
+		text-transform: uppercase;
 	}
 }
-h1{
-	text-transform: uppercase;
-	font-weight: 500;
-	@extend .heading6;
-	font-family: $gotham;
-color: white;
-text-align: center;
-}
-h4{
-	text-align: center;
-	text-transform: uppercase;
-}
-}
-.st0{
-	fill:none;
-	stroke:white;
-	stroke-width:1.8;
-	stroke-linecap:round;
-	stroke-linejoin:round;}
-.st1{
-	fill:#2C383A;
-	stroke:white;
-	stroke-width:1.8;
-	stroke-linecap:round;
-	stroke-linejoin:round;
+
+#flag {
+	.st0 {
+		fill: none;
+		stroke: #2C383A;
+		stroke-width: 1.8;
+		stroke-miterlimit: 10;
+	}
+
+	.flag_move {
+		transition: d 0.35s;
+	}
+	@keyframes flag {
+		0% {
+			d: path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5");
+		}
+
+		50% {
+			d: path("M56.8,12.5c5.9,3.8,8.8-2.4,14.7,1.4c0-3.6,0-5.5,0-9.1C65.6,1,62.7,7.2,56.8,3.4C56.8,7,56.8,8.9,56.8,12.5");
+		}
+
+		100% {
+			d: path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5");
+		}
+	}
+
+	&:hover {
+		.flag_move {
+			animation: flag 0.5s ease-out infinite;
+		}
+	}
 }
 
+.hats {
+	@keyframes fly {
+		0% {
+			transform: scale(1, 1) translateY(0px);
+		}
 
-.cls-1{
-	fill:none;
-	stroke:white;
-	stroke-linecap:round;
-	stroke-linejoin:round;stroke-width:1.8px;}
-.small_gear{
-transform: rotateZ(0deg);
+		50% {
+			transform: scale(1.1) rotateZ(-40deg) translateY(-10px);
+		}
+
+		100% {
+			transform: scale(1, 1) translateY(0px);
+		}
+	}
+	@keyframes fly1 {
+		0% {
+			transform: scale(1, 1) translateY(2px);
+		}
+
+		50% {
+			transform: scale(1, 1.3) translateY(-15px);
+		}
+
+		100% {
+			transform: scale(1, 1) translateY(0px);
+		}
+	}
+	@keyframes fly2 {
+		0% {
+			transform: scale(1, 1) translateY(0px);
+		}
+
+		50% {
+			transform: scale(1.5, 1.3) translateY(-18px);
+		}
+
+		100% {
+			transform: scale(1, 1) translateY(0px);
+		}
+	}
+
+	g {
+		&:nth-child(3) {
+			transform: rotateZ(0deg) translateY(0px);
+			transform-origin: 50% 50%;
+			-webkit-transition: -webkit-transform 0.2s;
+		}
+
+		&:nth-child(4) {
+			transform: rotateZ(0deg) translateY(0px);
+			transform-origin: 50% 50%;
+			-webkit-transition: -webkit-transform 0.2s;
+		}
+
+		&:nth-child(5) {
+			transform: rotateZ(0deg) translateY(0px);
+			transform-origin: 50% 50%;
+			-webkit-transition: -webkit-transform 0.2s;
+			// animation       : fly .4s ease infinite;
+			// transform-origin: left center;
+		}
+	}
+
+	&:hover {
+		g {
+			&:nth-child(3) {
+				transform: rotateZ(2deg) translateY(-2px);
+				transform-origin: 50% 50%;
+				transition: ease 0.2s;
+				-webkit-transition: -webkit-transform 0.2s;
+			}
+
+			&:nth-child(4) {
+				transform: rotateZ(-10deg) translateY(-11px);
+				transform-origin: 50% 50%;
+				transition: ease 0.2s;
+				-webkit-transition: -webkit-transform 0.2s;
+			}
+
+			&:nth-child(5) {
+				transform: rotateZ(30deg) translateY(-10px);
+				transform-origin: 50% 50%;
+				transition: ease 0.2s;
+				-webkit-transition: -webkit-transform 0.2s;
+			}
+		}
+	}
+}
+
+.city {
+	@keyframes fly-bird {
+		0% {
+			transform: scale(1, 1) translateY(0px);
+		}
+
+		50% {
+			transform: scale(1, 1.3) translateY(-2px);
+		}
+
+		100% {
+			transform: scale(1, 1) translateY(0px);
+		}
+	}
+
+	&:hover .bird {
+		animation: fly-bird 0.4s ease infinite;
+		transform-origin: left center;
+	}
+}
+
+.character {
+	g {
+		transition: ease 0.5s;
+		transform-origin: 50% 50%;
+	}
+
+	&:hover g {
+		transform-origin: 50% 50%;
+		animation: spin 2s linear infinite;
+	}
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.ribbon {
+	@keyframes wobble-bottom {
+		25% {
+			transform: skew(-2deg);
+		}
+
+		50% {
+			transform: skew(2deg);
+		}
+
+		75% {
+			transform: skew(-2deg);
+		}
+
+		100% {
+			transform: skew(0);
+		}
+	}
+
+	g {
+		display: inline-block;
+		transform-origin: 100% 0;
+	}
+
+	&:hover g {
+		animation: wobble-bottom 0.5s 1 ease-in-out;
+	}
+}
+//gear
+
+.small_gear {
+	transform: rotateZ(0deg);
 	transform-origin: 50% 50%;
--webkit-transition: -webkit-transform 2s;
+	-webkit-transition: -webkit-transform 2s;
 }
-.big_gear{
+
+.big_gear {
 	transform-origin: 50% 50%;
 	transform: rotateZ(0deg);
 	-webkit-transition: -webkit-transform 2s;
 }
-.icon_gear:hover{
-.small_gear{
-transform-origin: 50% 50%;
-transform: rotateZ(50deg);
--webkit-transition: -webkit-transform 2s;
-}
-.big_gear{
-	transform-origin: 50% 50%;
-	transform: rotateZ(-50deg);
-	-webkit-transition: -webkit-transform 2s;
-}
-}
-.smile{
-	.cls-1{fill:none;stroke-miterlimit:10;}.cls-1,.cls-2{stroke:white;stroke-width:1.8px;}
-	.cls-2{fill:white;stroke-linecap:round;stroke-linejoin:round;}
 
-
-
-.mouth{
-	-webkit-transition: -webkit-transform .5s;
-	transition: ease .5s;
-	// stroke: white;
-stroke-width: 1;
-}
-
-&:hover path.mouth {
-// 	animation       : building-flames 1s ease;
-// transform-origin: center top;
-
-stroke-width: 8;
-
-}
-}
-
-
-.ribbon{
-@keyframes wobble-bottom {
-	25% {
-		transform: skew(-2deg);
+.icon_gear:hover {
+	.small_gear {
+		transform-origin: 50% 50%;
+		transform: rotateZ(50deg);
+		-webkit-transition: -webkit-transform 2s;
 	}
 
-	50% {
-		transform: skew(2deg);
+	.big_gear {
+		transform-origin: 50% 50%;
+		transform: rotateZ(-50deg);
+		-webkit-transition: -webkit-transform 2s;
 	}
-	75% {
-		transform: skew(-2deg);
-	}
-
-	100% {
-		transform: skew(0);
-	}
-}
-
-g{
-	display: inline-block;
-	transform-origin: 100% 0;
-
-}
-&:hover g{
-
-
-		animation: wobble-bottom .5s 1 ease-in-out;
-	}
-
-
-.cls-1{fill:none;stroke:white;
-	stroke-linecap:round;
-	stroke-linejoin:round;
-	stroke-width:1.8px;}
-.cls-2{fill:white;}
 }
 
 .threepeople {
-	.cls-1{
-		fill:none;
-		stroke:white;
-		stroke-miterlimit:10;
-		stroke-width:1.8px;
-		line{
-				transition: ease .5s;
+	.st0 {
+		line {
+			transition: ease 0.5s;
 		}
 	}
-		&:hover .line{
-			stroke-dasharray: 50;
-				transition: ease .5s;
-			// stroke:white;
-			animation: dash 7s linear  infinite;
-		}
 
+	&:hover .line {
+		stroke-dasharray: 50;
+		transition: ease 0.5s;
+		// stroke:white;
+		animation: dash 7s linear infinite;
+	}
 	@keyframes dash {
-	to {
-	stroke-dashoffset: 1000;
-	}
-	}
-
-}
-.city{
-
-cls-1{fill:none;}
-.cls-1,.cls-2,.cls-3{stroke:#2c383a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;}
-.cls-2{fill:#fff;}
-.cls-3{fill:#2c383a;}
-
-@keyframes fly-bird {
-  0%   {transform: scale(1, 1)
-		translateY(0px);
-
-	}
-  50%  {transform: scale(1, 1.3)
-		translateY(-2px);
-	}
-  100% {transform: scale(1, 1)
-	translateY(0px);}
-}
-
-
-&:hover .bird{
-	animation       : fly-bird .4s ease infinite;
-	transform-origin: left center;
-}
-}
-
-
-
-
-
-.hats{
-
-.st0{fill:none;stroke:#2c383a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8px;}
-
-@keyframes fly {
-  0%   {transform: scale(1, 1)
-		translateY(0px);
-
-	}
-  50%  {transform: scale(1.1) rotateZ(-40deg)
-		translateY(-10px);
-	}
-  100% {transform: scale(1, 1)
-	translateY(0px);}
-}
-@keyframes fly1 {
-  0%   {transform: scale(1, 1)
-		translateY(2px);
-
-	}
-  50%  {transform: scale(1, 1.3)
-		translateY(-15px);
-	}
-  100% {transform: scale(1, 1)
-	translateY(0px);}
-}
-@keyframes fly2 {
-  0%   {transform: scale(1, 1)
-		translateY(0px);
-
-	}
-  50%  {transform: scale(1.5, 1.3)
-		translateY(-18px);
-	}
-  100% {transform: scale(1, 1)
-	translateY(0px);}
-}
-g{
-	&:nth-child(3){
-		transform: rotateZ(0deg) translateY(0px);
-			transform-origin: 50% 50%;
-		-webkit-transition: -webkit-transform .2s;
-			// animation       : fly .4s ease infinite;
-			// transform-origin: left center;
+		to {
+			stroke-dashoffset: 1000;
 		}
-
-&:nth-child(4){
-	transform: rotateZ(0deg) translateY(0px);
-		transform-origin: 50% 50%;
-	-webkit-transition: -webkit-transform .2s;
-		// animation       : fly .4s ease infinite;
-		// transform-origin: left center;
 	}
-	&:nth-child(5){
-		transform: rotateZ(0deg) translateY(0px);
-			transform-origin: 50% 50%;
-		-webkit-transition: -webkit-transform .2s;
-			// animation       : fly .4s ease infinite;
-			// transform-origin: left center;
-		}
-
-
-}
-&:hover{
-	g{
-		&:nth-child(3){
-			transform: rotateZ(2deg) translateY(-2px);
-			transform-origin: 50% 50%;
-			transition: ease .2s;
-
-		-webkit-transition: -webkit-transform .2s;
-	}
-	&:nth-child(4){
-			transform: rotateZ(-10deg) translateY(-11px);
-			transform-origin: 50% 50%;
-			transition: ease .2s;
-
-		-webkit-transition: -webkit-transform .2s;
-	}
-	&:nth-child(5){
-		transform: rotateZ(30deg) translateY(-10px);
-		transform-origin: 50% 50%;
-		transition: ease .2s;
-
-	-webkit-transition: -webkit-transform .2s;
-		}
-}
-}
-}
-
-#flag{
-	.flag_move {
-  transition: d 0.35s;
-}
-/*svg path {
-  fill: transparent;
-  stroke: hotpink;
-}*/
-@keyframes flag{
-	0% {
-		d: path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5");
-	}
-	50% {
-	d: path("M56.8,12.5c5.9,3.8,8.8-2.4,14.7,1.4c0-3.6,0-5.5,0-9.1C65.6,1,62.7,7.2,56.8,3.4C56.8,7,56.8,8.9,56.8,12.5");
-}
-100%{
-	d: path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5");
-}
-}
-
-
-&:hover {
-
-.flag_move {
-	animation: flag .5s ease-out infinite;
-  /*d: path("M56.8,11.5c5.9-1.9,8.8,5.4,14.7,3.5c0-3.6,0-5.5,0-9.1c-5.9,1.8-8.8-5.4-14.7-3.5C56.8,6,56.8,7.8,56.8,11.5");*/
-}
-}
 }
