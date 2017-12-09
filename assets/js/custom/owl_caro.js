@@ -1,115 +1,85 @@
-// jQuery(function($) {
-// $(document).ready(function() {
-//
-// 	$('.tab-content').each(function() {
-// 		$(this).appendTo('.respsonsive_owl');
-// 	});
-// 		var rowl = $('.respsonsive_owl');
-// rowl.owlCarousel({
-// loop:true,
-// margin:10,
-// slideSpeed : 300,
-// 		 paginationSpeed : 400,
-// 		 singleItem:true,
-// // rewindNav: false,
-// nav:true,
-// items:1,
-// });
-// });
-// });
-// jQuery(function($) {
-// $(document).ready(function() {
-//
-// 	$('.simple_slider').each(function() {
-// 		$(this).appendTo('.s-owl-carousel');
-// 	});
-// 		var sowl = $('.s-owl-carousel');
-// sowl.owlCarousel({
-// // loop:true,
-// // margin:10,
-// slideSpeed : 300,
-// 		 paginationSpeed : 400,
-// 		 singleItem:true,
-// rewindNav: false,
-// nav:true,
-// items:1,
-// });
-// });
-//
-//
-//
-// });
-
-
 jQuery(function($) {
+
 	$(document).ready(function() {
-		$('.social-feed-text').appendTo('.name');
-});
-		$(document).ready(function() {
-			$('.social-feed-text').appendTo('.name');
-			$('.social-feed-text').each(function() {
-			  $(this).appendTo('.name');
-					// $(this).attr('id', i);
+		$('.horizontal_slider').each(function() {
+			$(this).appendTo('.owl-carousel').wrapAll("<div class='item' />");
+		});
 
-			});
+		$('.item').each(function(i) {
+			$(this).attr('data-hash', i);
+			// $(this).attr('id', i);
+		});
 
+		var owl = $('.owl-carousel');
+		// var items;
+		// var item;
+		$('.owl-carousel').owlCarousel({
+			items: 1,
+			loop: false,
+			// mouseDrag: false,
+			// touchDrag: false,
+			center: true,
+			margin: 10,
+			URLhashListener: true,
+			autoplayHoverPause: true,
+			startPosition: 'URLHash'
+		});
+		// $('.item').each(function(i) {
+		// 	$(this).attr('data-hash', i);
+		// 	// $(this).attr('id', i);
+		// });
+		$('.btnJump').click(function() {
+			$('#myCarousel').trigger('to.owl.carousel', 1);
+		});
 
-			var winHeight = $(window).height();
-			  $('.owl-controls').css({ 'height': winHeight});
+		// owl.owlCarousel({
+		// 	items: 1,
+		// 	loop: false,
+		// 	center: true,
+		// 	mouseDrag: false,
+		// 	touchDrag: false,
+		// 	margin: 10,
+		// 	callbacks: true,
+		// 	URLhashListener: true,
+		// 	// autoplay: false,
+		// 	autoplayHoverPause: true,
+		// 	startPosition: 'URLHash',
+		//
+		// 	// nav: true,
+		// 	// navText: ["", ""],
+		// 	// smartSpeed: 900,
+		// 	// margin:10,
+		// 	// URLhashListener: true,
+		// 	// loop: false,
+		// 	// items: 1,
+		// 	// URLhashListener: true,
+		// 	// autoplayHoverPause: true,
+		// 	// startPosition: 'URLHash',
+		// 	dots: true,
+		// });
+		// owl.on('changed.owl.carousel', function(property) {
+		// 	var current = property.item.index;
+		// 	window.location.hash = current + 1;
+		// });
+		// owl.on('changed.owl.carousel', function(event) {
+		// 	location.hash = 'slide' + event.property.value;
+		// });
 
-$('.horizontal_slider').each(function() {
-  $(this).appendTo('.owl-carousel');
-		// $(this).attr('id', i);
+		function callback(e) {
+			items = e.item.count; // Number of items
+			item = e.item.index; // Position of the current item
+		}
 
-});
-$('.owl-stage .owl-item').each(function(i) {
-	$(this).attr('data-hash', i);
-	$(this).attr('id', i);
-});
+		function next() {
+			owl.trigger('next.owl');
+			console.log("next");
+		}
 
-$('.owl-carousel').addClass('.owl-theme');
-	var owl = $('.owl-carousel');
-	var items;
-var item;
-	owl.owlCarousel({
+		function prev() {
+			owl.trigger('prev.owl');
+			console.log("next");
+		}
 
-	    nav:true,
-			 navText : ["",""],
-			    smartSpeed :900,
-	    // margin:10,
-			loop: true,
-			items:1,
-			dots:true,
-			// rewindNav: true,
-       // navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-
-
-		  onChanged: callback,
-	});
-
- function callback(e) {
-    items = e.item.count;     // Number of items
-    item = e.item.index;     // Position of the current item
-}
-function next(){
-	          owl.trigger('next.owl');
-						console.log("next");
-}
-function prev(){
-	          owl.trigger('prev.owl');
-						console.log("next");
-}
-owl.bind('mousewheel', function () {
-    // console.log(new Date().getTime());
-});
-	// owl.on('mousewheel', '.owl-stage', function (e) {
-	//         if (e.deltaY < 0) {
-	// 										 	setTimeout(next, 600);
-	//         } else {
-	//           setTimeout(prev, 600);
-	//         }
-	// 				 // e.preventDefault();
-	//       });
 
 
 	});

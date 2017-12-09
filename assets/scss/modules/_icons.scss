@@ -1,6 +1,6 @@
 .icon_blurb {
 	max-width: 100%;
-	margin: 0 auto;
+	margin   : 0 auto;
 
 	.white {
 		stroke: #FFFFFF;
@@ -19,45 +19,45 @@
 	}
 
 	.st0 {
-		fill: none;
-		stroke-width: 1.8;
-		stroke-linecap: round;
-		stroke-linejoin: round;
+		fill             : none;
+		stroke-width     : 1.8;
+		stroke-linecap   : round;
+		stroke-linejoin  : round;
 		stroke-miterlimit: 10;
 	}
 
 	svg {
-		text-align: center;
-		margin: 2em auto;
-		max-height: 5em;
+		text-align : center;
+		margin     : 2em auto;
+		max-height : 5em;
 		line-height: 5em;
 
 		img {
-			max-height: 5em;
+			max-height : 5em;
 			line-height: 5em;
 		}
 	}
 
 	h1 {
 		text-transform: uppercase;
-		font-weight: 500;
+		font-weight   : 500;
 		@extend .heading6;
-		font-family: $gotham;
-		color: white;
-		text-align: center;
+		font-family   : $gotham;
+		color         : white;
+		text-align    : center;
 	}
 
 	h4 {
-		text-align: center;
+		text-align    : center;
 		text-transform: uppercase;
 	}
 }
 
 #flag {
 	.st0 {
-		fill: none;
-		stroke: #2C383A;
-		stroke-width: 1.8;
+		fill             : none;
+		stroke           : #2C383A;
+		stroke-width     : 1.8;
 		stroke-miterlimit: 10;
 	}
 
@@ -128,20 +128,20 @@
 
 	g {
 		&:nth-child(3) {
-			transform: rotateZ(0deg) translateY(0px);
-			transform-origin: 50% 50%;
+			transform         : rotateZ(0deg) translateY(0px);
+			transform-origin  : 50% 50%;
 			-webkit-transition: -webkit-transform 0.2s;
 		}
 
 		&:nth-child(4) {
-			transform: rotateZ(0deg) translateY(0px);
-			transform-origin: 50% 50%;
+			transform         : rotateZ(0deg) translateY(0px);
+			transform-origin  : 50% 50%;
 			-webkit-transition: -webkit-transform 0.2s;
 		}
 
 		&:nth-child(5) {
-			transform: rotateZ(0deg) translateY(0px);
-			transform-origin: 50% 50%;
+			transform         : rotateZ(0deg) translateY(0px);
+			transform-origin  : 50% 50%;
 			-webkit-transition: -webkit-transform 0.2s;
 			// animation       : fly .4s ease infinite;
 			// transform-origin: left center;
@@ -151,23 +151,23 @@
 	&:hover {
 		g {
 			&:nth-child(3) {
-				transform: rotateZ(2deg) translateY(-2px);
-				transform-origin: 50% 50%;
-				transition: ease 0.2s;
+				transform         : rotateZ(2deg) translateY(-2px);
+				transform-origin  : 50% 50%;
+				transition        : ease 0.2s;
 				-webkit-transition: -webkit-transform 0.2s;
 			}
 
 			&:nth-child(4) {
-				transform: rotateZ(-10deg) translateY(-11px);
-				transform-origin: 50% 50%;
-				transition: ease 0.2s;
+				transform         : rotateZ(-10deg) translateY(-11px);
+				transform-origin  : 50% 50%;
+				transition        : ease 0.2s;
 				-webkit-transition: -webkit-transform 0.2s;
 			}
 
 			&:nth-child(5) {
-				transform: rotateZ(30deg) translateY(-10px);
-				transform-origin: 50% 50%;
-				transition: ease 0.2s;
+				transform         : rotateZ(30deg) translateY(-10px);
+				transform-origin  : 50% 50%;
+				transition        : ease 0.2s;
 				-webkit-transition: -webkit-transform 0.2s;
 			}
 		}
@@ -190,20 +190,20 @@
 	}
 
 	&:hover .bird {
-		animation: fly-bird 0.4s ease infinite;
+		animation       : fly-bird 0.4s ease infinite;
 		transform-origin: left center;
 	}
 }
 
 .character {
 	g {
-		transition: ease 0.5s;
+		transition      : ease 0.5s;
 		transform-origin: 50% 50%;
 	}
 
 	&:hover g {
 		transform-origin: 50% 50%;
-		animation: spin 2s linear infinite;
+		animation       : spin 2s linear infinite;
 	}
 	@keyframes spin {
 		from {
@@ -236,7 +236,7 @@
 	}
 
 	g {
-		display: inline-block;
+		display         : inline-block;
 		transform-origin: 100% 0;
 	}
 
@@ -247,27 +247,27 @@
 //gear
 
 .small_gear {
-	transform: rotateZ(0deg);
-	transform-origin: 50% 50%;
+	transform         : rotateZ(0deg);
+	transform-origin  : 50% 50%;
 	-webkit-transition: -webkit-transform 2s;
 }
 
 .big_gear {
-	transform-origin: 50% 50%;
-	transform: rotateZ(0deg);
+	transform-origin  : 50% 50%;
+	transform         : rotateZ(0deg);
 	-webkit-transition: -webkit-transform 2s;
 }
 
 .icon_gear:hover {
 	.small_gear {
-		transform-origin: 50% 50%;
-		transform: rotateZ(50deg);
+		transform-origin  : 50% 50%;
+		transform         : rotateZ(50deg);
 		-webkit-transition: -webkit-transform 2s;
 	}
 
 	.big_gear {
-		transform-origin: 50% 50%;
-		transform: rotateZ(-50deg);
+		transform-origin  : 50% 50%;
+		transform         : rotateZ(-50deg);
 		-webkit-transition: -webkit-transform 2s;
 	}
 }
@@ -281,9 +281,9 @@
 
 	&:hover .line {
 		stroke-dasharray: 50;
-		transition: ease 0.5s;
+		transition      : ease 0.5s;
 		// stroke:white;
-		animation: dash 7s linear infinite;
+		animation       : dash 7s linear infinite;
 	}
 	@keyframes dash {
 		to {

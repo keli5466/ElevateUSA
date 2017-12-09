@@ -1,3 +1,5 @@
+
+
 /**
  * Gulpfile.
  *
@@ -27,7 +29,7 @@
  * In paths you can add <<glob or array of globs>>. Edit the variables as per your project requirements.
  */
 
-// START Editing Project Variables.
+// START Editing Project Variables.s
 // Project related.
 var project                 = 'Elevate'; // Project Name.
 var projectURL              = 'elevateusa.dev'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
@@ -72,19 +74,21 @@ var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 
 // Browsers you care about for autoprefixing.
 // Browserlist https        ://github.com/ai/browserslist
-const AUTOPREFIXER_BROWSERS = [
-    'last 2 version',
-    '> 1%',
-    'ie >= 9',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4',
-    'bb >= 10'
-  ];
+// const AUTOPREFIXER_BROWSERS = [
+//     'last 2 version',
+//     '> 1%',
+//     'ie >= 9',
+//     'ie_mob >= 10',
+//     'ff >= 30',
+//     'chrome >= 34',
+//     'safari >= 7',
+//     'opera >= 23',
+//     'ios >= 7',
+//     'android >= 4',
+//     'bb >= 10'
+//   ];
+	var autoPrefixBrowserList = ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'];
+
 
 // STOP Editing Project Variables.
 
@@ -182,7 +186,7 @@ gulp.task( 'browser-sync', function() {
     .on('error', console.error.bind(console))
     .pipe( sourcemaps.write( { includeContent: false } ) )
     .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
+    .pipe( autoprefixer( autoPrefixBrowserList ) )
 
     .pipe( sourcemaps.write ( styleDestination ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
@@ -202,7 +206,7 @@ gulp.task( 'browser-sync', function() {
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
-    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) );
  });
 
 
@@ -319,6 +323,6 @@ gulp.task( 'browser-sync', function() {
   */
  gulp.task( 'default', ['styles', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+  gulp.watch( styleWatchFiles, [ 'styles' , reload] ); // Reload on SCSS file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
  });
