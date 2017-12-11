@@ -39,11 +39,12 @@ jQuery(function($) {
 	$(document).ready(function() {
 		$('.tile_click').each(function(i) {
 			$(this).attr('data-tab', i);
-			$(this).attr('id', i);
+			// $(this).attr('id', i);
 		});
 
 		$('.tab-content').each(function(i) {
 			$(this).attr('data-tab', i);
+			$(this).appendTo('.testing_click');
 		});
 		$('.tile_click').click(function() {
 			$('.tab-content').removeClass('current');

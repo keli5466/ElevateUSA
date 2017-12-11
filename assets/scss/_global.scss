@@ -1,75 +1,81 @@
-ul.car.hideme{
+ul.car.hideme {
 	padding: 0;
 }
 
-#stats{
-	.et_pb_blurb{
+#stats {
+	.et_pb_blurb {
 		padding: 5%;
-
 	}
 }
 
-.et_pb_row{
+.et_pb_row {
 	width: 85%!important;
 }
+
 .popup {
- display:none; /*hidden on pageload*/
- width: 100vw;
- height: 100%;
- position: absolute;
- padding-right: 20%;
- left: 0;
- z-index: 9;
- top: 0;
- background-color: #f2f2f2;
- .et_pb_code_inner{
-	 position: inherit;
-
- .close{
-	 position: absolute;
-	 left: -10%;
-	 font-size: 3em;
-	 font-weight: 100;
-	 color: grey;
- }
+	display         : none;
+	/*hidden on pageload*/
+	width           : 100vw;
+	height          : 100%;
+	position        : absolute;
+	padding-right   : 20%;
+	left            : 0;
+	z-index         : 9;
+	top             : 0;
+	background-color: #f2f2f2;
+	// .et_pb_code_inner {
+	// 	position: relative;
+	//
+	// 	.close {
+	// 		position   : absolute;
+	// 		right      : 50%;
+	// 		font-size  : 3em;
+	// 		font-weight: 100;
+	// 		color      : grey;
+	// 	}
+	// }
+	.new_wrap {
+		padding: 5% 0;
+		height : 100%;
+		display: block;
+		width  : 100%;
+	}
 }
- .new_wrap{
-	 padding: 5% 0%;
-height: 100%;
-display: block;
-width: 100%;
- }
 
-}
-
-
-.orange{
+.orange {
 	color: $orange !important;
 }
-.et_pb_equal_columns{
-	@include bp(tablet){
+
+.et_pb_equal_columns {
+	@include bp(tablet) {
 		display: flex;
 	}
 }
-.hidden{
+
+.hidden {
 	visibility: hidden;
 }
-.bg_navy{
-	background-color: $navy!important;
 
+.bg_navy {
+	background-color: $navy!important;
 }
-.bg_orange{
+
+.bg_orange {
 	background-color: $orange!important;
 }
-.white{
-	color:white;
+
+.white {
+	color: white;
 }
-.navy{
-	color:$navy;
+
+.navy {
+	color: $navy;
 }
-#page-container{
+
+#page-container {
 	overflow: hidden;
 }
+
 .alpha {
 	font-family: $alpha;
 }
@@ -78,19 +84,22 @@ width: 100%;
 	font-family: $gotham;
 }
 
-.baron{
+.baron {
 	font-family: $baron;
 }
 
 .uppercase {
 	text-transform: uppercase;
 }
-.inner_page_header{
+
+.inner_page_header {
 	height: 50vh;
 }
-li{
+
+li {
 	list-style: none;
 }
-b{
+
+b {
 	font-family: $roundedmeduim;
 }

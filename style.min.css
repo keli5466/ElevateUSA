@@ -17,8 +17,6 @@ ul.car.hideme{padding:0}
 #stats .et_pb_blurb{padding:5%}
 .et_pb_row{width:85% !important}
 .popup{display:none;width:100vw;height:100%;position:absolute;padding-right:20%;left:0;z-index:9;top:0;background-color:#f2f2f2}
-.popup .et_pb_code_inner{position:inherit}
-.popup .et_pb_code_inner .close{position:absolute;left:-10%;font-size:3em;font-weight:100;color:grey}
 .popup .new_wrap{padding:5% 0;height:100%;display:block;width:100%}
 .orange{color:#e8773d !important}
 .hidden{visibility:hidden}
@@ -147,7 +145,7 @@ g.State:hover .state_name{opacity:1;-webkit-transition:.3s ease-in;transition:.3
 .threepeople .st0 line{-webkit-transition:ease .5s;transition:ease .5s}
 .threepeople:hover .line{stroke-dasharray:50;-webkit-transition:ease .5s;transition:ease .5s;-webkit-animation:dash 7s linear infinite;animation:dash 7s linear infinite}
 .popup{display:none;width:100vw !important;height:100%;position:absolute;padding-right:20%;left:0;z-index:9;top:0;background-color:#f2f2f2}
-.popup .et_pb_code{position:absolute;right:-50%;text-align:center;top:-10%;width:100%}
+.popup .et_pb_code{position:absolute;right:-60%;text-align:center;top:-10%;width:100%}
 .popup .et_pb_code .close{font-size:3em;font-weight:100;color:grey}
 .popup .new_wrap{padding:5% 0;height:100%;display:block;width:80%}
 .tile_hover{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -252,6 +250,8 @@ div#et-top-navigation{padding-top:0 !important}
 #main-footer .grid .col-1-2 .terms{font-size:14px;font-weight:bold}
 #main-footer .grid .col-1-3{width:15%;position:absolute;right:5%;bottom:7%}
 .chart span{color:#2d383a;font-size:65px;font-weight:bold}
+.testing_click{width:70%;text-align:center;margin:0 auto;padding-left:1%}
+.et_pb_section_3.et_pb_section{padding:0 !important}
 .info_guy .side_blurbs{width:39%;margin:0 auto}
 .info_guy .main_img{width:15%;padding:0 1%;margin:0 3%}
 .info_guy .right{float:right}
@@ -274,7 +274,7 @@ div#et-top-navigation{padding-top:0 !important}
 .tab-content{display:none}
 .tab-content .et_pb_text .col_wrapper{-webkit-columns:2;columns:2;-webkit-column-fill:balance;column-fill:balance;font-size:14px;line-height:1.2em}
 .tab-content .et_pb_text .col_wrapper:hover{line-height:1.5em}
-.tab-content.current{display:inherit}
+.tab-content.current{display:inherit;width:95% !important;padding-left:1% !important}
 @media(min-width:630px) and (max-width:1075px){.et_pb_equal_columns{display:-webkit-box;display:-ms-flexbox;display:flex}
 h2{font-size:36px}
 .heading2,.custom_slider .et_pb_slide .et_pb_slide_description h1{font-size:36px}
