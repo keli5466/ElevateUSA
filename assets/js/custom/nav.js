@@ -36,10 +36,10 @@ jQuery(function($) {
 	});
 });
 
-function scrollTo(hash) {
-	location.hash = "#" + hash;
-}
-
+// function scrollTo(hash) {
+// 	location.hash = "#" + hash;
+// }
+// location.hash = "#" + hash;
 jQuery(function($) {
 	$(document).ready(function() {
 
@@ -61,8 +61,28 @@ jQuery(function($) {
 
 
 
+
+// if (window.location.pathname == "/sucess-stories/") {
+// 	console.log("that");
+// 	var newhash = location.hash.split('')[1];
+// 	$('.tile_click').removeClass('current');
+// 	$('.tile_click').eq(parseInt(newhash, 10)).trigger('click');
+// 	var d = $('.tab-content').get(newhash);
+// 	console.log(d);
+//
+// 	$(d).removeClass('current');
+// 	$(d).addClass('current');
+// 	setTimeout(function() {
+//
+// 		$('html, body').animate({
+// 			scrollTop: $(".tile_click").offset().top
+// 		}, 2000);
+// 	});
+// }
+
 jQuery(function($) {
 	$(document).ready(function() {
+
 		$('.tile_click').each(function(i) {
 			$(this).attr('data-tab', i);
 			// $(this).attr('id', i);
@@ -70,21 +90,37 @@ jQuery(function($) {
 
 		$('.tab-content').each(function(i) {
 			$(this).attr('data-tab', i);
+			// $(this).attr('id', i);
 			$(this).appendTo('.testing_click');
 		});
+
+
+
+
 		$('.tile_click').click(function() {
 			$('.tab-content').removeClass('current');
 			var tab_id = $(this).attr('data-tab');
+			// var tab_id = $(this).attr('id');
 			$('.tile_click').removeClass('current');
 			var d = $('.tab-content').get(tab_id);
 			console.log(d);
 			$(d).removeClass('current');
+			// window.location.hash = d;
 			$(d).addClass('current');
 			$(this).addClass('current');
+
 		});
 
 	});
 });
+
+
+
+
+
+
+
+
 
 jQuery(function($) {
 	$(document).ready(function() {

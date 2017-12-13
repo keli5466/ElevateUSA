@@ -7,8 +7,101 @@ jQuery(function($) {
 
 		$('.item').each(function(i) {
 			$(this).attr('data-hash', i);
-			// $(this).attr('id', i);
+			// $(this).attr('id', 'slide-' + i);
 		});
+
+
+		// window.location.hash = "";
+		// $(function() {
+		// 	var hash = parseInt(location.hash.replace('#', ''), 10);
+		//
+		//
+		//
+		// 	if (window.location.hash) {
+		// 		setTimeout(function() {
+		// 			if (typeof hash === 'number') {
+		// 				$('html, body').animate({
+		// 					scrollTop: $("#custom_o").offset().top
+		// 				}, 2000);
+		// 			}
+		// 		}, 150);
+		//
+		//
+		//
+		// 	} else {
+		// 		console.log("abc");
+		//
+		// 	}
+		// 
+		// });
+
+
+		$(function() {
+			var hash = parseInt(location.hash.replace('#', ''), 10);
+
+
+
+			if (window.location.hash) {
+
+				if (window.location.pathname == "/our-programs/") {
+					setTimeout(function() {
+						if (typeof hash === 'number') {
+							$('html, body').animate({
+								scrollTop: $("#custom_o").offset().top
+							}, 2000);
+						}
+					}, 150);
+				}
+
+
+				if (window.location.pathname == "/sucess-stories/") {
+					console.log("that");
+					var newhash = location.hash.split('')[1];
+					$('.tile_click').removeClass('current');
+					$('.tile_click').eq(parseInt(newhash, 10)).trigger('click');
+					var d = $('.tab-content').get(newhash);
+					console.log(d);
+
+					$(d).removeClass('current');
+					$(d).addClass('current');
+					setTimeout(function() {
+
+						$('html, body').animate({
+							scrollTop: $(".tile_click").offset().top
+						}, 2000);
+					});
+				}
+
+			} else {
+				console.log("abc");
+
+			}
+
+		});
+
+		// $(function() {
+		// 	var hash = parseInt(location.hash.replace('#', ''), 10);
+		// 	// hash = hash.split('-')[2];
+		// 	if (window.location.hash) {
+		// 		if (window.location.pathname == "/sucess-stories/") {
+		// 			console.log("that");
+		// 			setTimeout(function() {
+		//
+		// 				$('html, body').animate({
+		// 					scrollTop: $(".tile_click").offset().top
+		// 				}, 2000);
+		// 			});
+		// 		}
+		//
+		// 	} else {
+		// 		console.log("abc");
+		//
+		// 	}
+		//
+		// });
+
+		// <div id="foo"></div>
+
 
 		var owl = $('.owl-carousel');
 		// var items;
@@ -28,9 +121,12 @@ jQuery(function($) {
 		// 	$(this).attr('data-hash', i);
 		// 	// $(this).attr('id', i);
 		// });
-		$('.btnJump').click(function() {
-			$('#myCarousel').trigger('to.owl.carousel', 1);
-		});
+
+		// $('#fwork').click(function() {
+		// 	console.log("work");
+		// 	 owl.jumpTo(3);
+		// 	// $('.owl-carousel').trigger('to.owl.carousel', 3);
+		// });
 
 		// owl.owlCarousel({
 		// 	items: 1,
