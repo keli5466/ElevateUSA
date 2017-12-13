@@ -1,14 +1,15 @@
 .et_pb_button {
-	font-family: $gotham;
+	font-family   : $gotham;
 	text-transform: capitalize;
-	color: white!important;
-	border: none!important;
-	border-radius: 0;
+	color         : white!important;
+	border        : none!important;
+	border-radius : 0;
 	@extend .heading6;
-	font-weight: bold;
-	padding: 0.35em 1.3em 0.2em;
-	&:hover{
-		padding: 0.35em 1.3em 0.2em!important;
+	font-weight   : bold;
+	padding       : 0.35em 1.3em 0.2em;
+
+	&:hover {
+		padding: 0.35em 1.3em 0.2em!important !important;
 	}
 
 	&.et_pb_bg_layout_light {
@@ -46,15 +47,16 @@
 
 		&:hover {
 			padding: 0.35em 1.3em 0.2em;
+
 			&.et_pb_bg_layout_light {
 				background-color: white!important;
 				// border:2px solid $navy!important;
-				color: $navy!important;
+				color           : $navy!important;
 			}
 
 			&.et_pb_bg_layout_dark {
 				background-color: white!important;
-				color: $orange!important;
+				color           : $orange!important;
 				// border:2px solid $orange!important;
 			}
 		}

@@ -1,5 +1,11 @@
 jQuery(function($) {
 	$(document).ready(function() {
+		$("button").click(function() {
+			$("input:text").val("Glenn Quagmire");
+		});
+	});
+
+	$(document).ready(function() {
 
 		$(".no_row").each(function(i) {
 			$(this).attr('data-id', i);
@@ -30,8 +36,28 @@ jQuery(function($) {
 	});
 });
 
+function scrollTo(hash) {
+	location.hash = "#" + hash;
+}
 
+jQuery(function($) {
+	$(document).ready(function() {
 
+		// $(document).ready(function() {
+		// if (window.location.hash) {
+		// 	var hash = window.location.hash;
+		// 	$('html, body').animate({
+		// 		scrollTop: $(hash).offset().top
+		// 	}, 500);
+		// }
+		// $('.et_pb_more_button').click(function(event) {
+		// 	$('html, body').animate({
+		// 		scrollTop: $('#custom_o').offset().top
+		// 	}, 500);
+		// 	event.preventDefault();
+		// });
+	});
+});
 
 
 
