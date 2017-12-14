@@ -1,0 +1,63 @@
+.et_menu_container {
+	width: 100%;
+	padding: 0 10%;
+	height: $mobile_header;
+	@include bp(M) {
+		height: 100%;
+	}
+	.mobile_menu_bar {
+		padding: 1.5em 0 !important;
+		&:before {
+			color: $orange;
+		}
+	}
+	.et_mobile_nav_menu {}
+	.et_mobile_menu {
+		border-top: none;
+		top: $mobile_header;
+		background-color: $orange!important;
+		li {
+			text-transform: uppercase;
+			// margin: .2em 0em;
+			// height: 2.5em;
+			font-family: $gotham;
+			a {
+				text-align: left;
+				color: white;
+				border-bottom: white 1px solid;
+			}
+		}
+		.social_icons {
+			background-color: transparent;
+			position: relative;
+			width: 30%;
+			display: inline-block;
+			padding-left: 0;
+			margin: 1.2em auto;
+			text-align: center;
+			a {
+				border-bottom: none;
+				float: right;
+				img {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					max-height: 1.5em;
+					transform: translate(-50%,-50%);
+				}
+			}
+		}
+		.donate {
+			width: 100%;
+			background-color: $lightgrey;
+			a {
+				color: $navy;
+				text-align: center;
+				border-bottom: none;
+				&:hover {
+					color: white!important;
+				}
+			}
+		}
+	}
+}

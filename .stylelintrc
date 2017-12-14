@@ -1,0 +1,17 @@
+{
+  # "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "extends",
+        "extend",
+        "include",
+        "ignores"
+      ]
+    }],
+    "indentation": "tab",
+    "number-leading-zero": null,
+    "declaration-colon-space-before": "never",
+    "unit-whitelist": ["em", "rem", "s", "vh", "vw" , "%", "px"]
+  }
+}

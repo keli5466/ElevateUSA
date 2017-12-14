@@ -1,4 +1,10 @@
 jQuery(function($) {
+	if ($(window).width() <= 630) {
+		// do your stuff
+
+		$('.advisory_board_text').appendTo('.et_pb_toggle_content');
+		$('.advisory_board_title').appendTo('.et_pb_toggle_title');
+	}
 	$(document).ready(function() {
 		$("button").click(function() {
 			$("input:text").val("Glenn Quagmire");
@@ -35,6 +41,10 @@ jQuery(function($) {
 		});
 	});
 });
+
+
+
+
 
 // function scrollTo(hash) {
 // 	location.hash = "#" + hash;

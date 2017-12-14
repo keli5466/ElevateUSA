@@ -9,24 +9,24 @@
 	padding       : 0.35em 1.3em 0.2em;
 
 	&:hover {
-		padding: 0.35em 1.3em 0.2em!important !important;
+		padding: 0.35em 1.3em 0.2em !important;
 	}
 
 	&.et_pb_bg_layout_light {
-		background-color: $navy!important;
+		background-color: $navy !important;
 	}
 
 	&.et_pb_bg_layout_dark {
-		background-color: $orange!important;
+		background-color: $orange !important;
 	}
 
 	&:hover {
 		&.et_pb_bg_layout_light {
-			background-color: $orange!important;
+			background-color: $orange !important;
 		}
 
 		&.et_pb_bg_layout_dark {
-			background-color: $navy!important;
+			background-color: $navy !important;
 		}
 
 		&:after {

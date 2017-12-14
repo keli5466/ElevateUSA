@@ -1,187 +1,173 @@
-/*.other_op{
-	width: 25%;
-}*/
 .wrapper {
-	width : 80%;
+	// width : 80%;
 	margin: 0 auto;
-
 	.radio-group {
-		display    : table;
-		width      : 100%;
+		display: table;
+		width: 100%;
 		font-family: $roundedmeduim;
-		font-size  : 1.5em!important;
-		border     : $_grey 1px solid;
-		overflow   : hidden;
-
+		font-size: 1.5em!important;
+		border: $_grey 1px solid;
+		overflow: hidden;
 		.row_table {
-			height : 50px;
+			height: 50px;
 			display: table-row;
-
+			@include bp(phone) {
+				display: flex;
+				flex-wrap: wrap;
+				height: auto;
+			}
 			input[type=radio] {
-				position  : absolute;
+				position: absolute;
 				visibility: hidden;
-				display   : none;
+				display: none;
 			}
-
 			label {
-				cursor : pointer;
-				border : $_grey 1px solid;
-				color  : $_grey;
-				padding: 25px;
+				cursor: pointer;
+				border: $_grey 1px solid;
+				color: $_grey;
+				padding: 1em;
 			}
-
 			.cash {
-				width         : 25%;
-				height        : auto;
-				display       : table-cell;
-				text-align    : center;
+				width: 25%;
+				height: auto;
+				display: table-cell;
+				text-align: center;
 				vertical-align: middle;
+				@include bp(phone) {
+					width: 50%;
+				}
 			}
-
 			.inputother {
-				width         : 300%;
-				height        : auto;
-				display       : table-cell;
-				text-align    : left;
+				width: 300%;
+				height: auto;
+				display: table-cell;
+				text-align: left;
 				vertical-align: middle;
-				font-size     : 25px;
-				line-height   : 73px;
-				text-indent   : 5%;
+				font-size: 25px;
+				line-height: 73px;
+				text-indent: 5%;
+				@include bp(phone) {
+					width: 50%;
+					// padding: 25px;
+				}
 				// border        : none;
 				// padding       : 20px;
 			}
-
 			input[type=radio]:checked + label {
 				background: $navy;
-				color     : white;
+				color: white;
 			}
 		}
 	}
-
 	.sumbit_to {
-		width         : 25%;
-		height        : 50px;
-		display       : table-cell;
-		text-align    : center;
+		width: 25%;
+		height: auto;
+		display: table-cell;
+		text-align: center;
 		text-transform: uppercase;
-		background    : $orange;
-		color         : white;
+		background: $orange;
+		color: white;
 		vertical-align: middle;
-		float         : right;
-		font-size     : 1.5em;
-		padding       : 0;
+		float: right;
+		font-size: 1.5em;
+		padding: 1em;
+		@include bp(phone) {
+			width: 50%;
+		}
 	}
 }
-
 .form_title {
-	font-family   : $gotham;
-	color         : $orange;
-	font-weight   : bolder;
+	font-family: $gotham;
+	color: $orange;
+	font-weight: bolder;
 	padding-bottom: 2em;
 	// @extend .heading6;
 	@extend .heading5;
 	text-transform: uppercase;
-
 	&.outlier {
 		@extend .et_pb_row;
 	}
 }
-
 .donate_button {
-	font-family     : $gotham;
-	text-transform  : capitalize;
-	color           : white!important;
+	font-family: $gotham;
+	text-transform: capitalize;
+	color: white!important;
 	background-color: $orange!important;
-	border          : none!important;
-	border-radius   : 0;
+	border: none!important;
+	border-radius: 0;
 	@extend .heading6;
-	font-weight     : bold;
-	float           : right;
-	margin-top      : 5%;
-	padding         : 0.35em 1.3em 0.2em !important;
-
+	font-weight: bold;
+	float: right;
+	margin-top: 5%;
+	padding: 0.35em 1.3em 0.2em !important;
 	&:hover {
 		background-color: $navy!important;
-		padding         : 0.35em 1.3em 0.2em !important;
+		padding: 0.35em 1.3em 0.2em !important;
 	}
 }
-
 .custom_form {
 	.et_pb_code {
 		width: 100%;
 	}
 }
-
 .BG_first_row {
 	background-color: $lightgrey;
 }
-
 .BG_first_row,
 .second_row {
 	padding: 5% 0;
 }
-
 .first_row,
 .second_row {
 	display: flex;
 	// padding: 0.5em 0;
 	@extend .et_pb_row;
-
 	.col-1-2 {
 		width: 47.25%;
-
 		&:first-child {
 			margin-right: 5.5%;
 		}
 	}
 }
-
 .col {
 	flex: 1;
 }
-
 .col-1-2 {
 	// width: 50%;
 }
-
 .recurring {
 	display: none;
 }
-
 .donation-form .field .required-star {
 	display: none!important;
 }
-
 .field {
-	height : 6em;
+	height: 6em;
 	padding: 0.5em 0;
-
 	label {
 		// padding-bottom: 0.5em;
 		text-transform: uppercase;
-		font-family   : $roundedmeduim;
-		color         : $_grey!important;
+		font-family: $roundedmeduim;
+		color: $_grey!important;
 	}
-
 	input,
 	select,
 	textarea {
-		min-height   : 2em;
-		height       : 2em;
-		width        : 100%!important;
-		max-width    : 100%!important;
-		background   : white;
+		min-height: 2em;
+		height: 2em;
+		width: 100%!important;
+		max-width: 100%!important;
+		background: white;
 		// min-height   : 4em;
-		font-size    : 1.5em;
-		text-indent  : 0.5em;
+		font-size: 1.5em;
+		text-indent: 0.5em;
 		border-radius: 0 !important;
-		padding      : 0 !important;
-		border       : $lightgrey 2px solid;
+		padding: 0 !important;
+		border: $lightgrey 2px solid;
 		// -webkit-appearance   : none;
 		// -webkit-border-radius: 0;
 	}
 }
-
 textarea {
 	resize: none;
 }
@@ -196,32 +182,28 @@ textarea {
 // 	// margin-top : 1em;
 // 	color    : $lightgrey;
 // }
-
 textarea#comment {
 	height: 10em;
 }
-
 .field.text.comment {
 	height: auto;
 }
-
 button:focus,
 input:focus,
 select:focus,
 textarea:focus {
 	outline: none;
 }
-
 select {
 	// width              : 100px;
-	float              : left;
-	appearance         : none;
-	-webkit-appearance : none;
-	-moz-appearance    : none;
-	-ms-appearance     : none;
-	position           : relative;
-	background         : white url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png")!important;
-	background-repeat  : no-repeat!important;
+	float: left;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	position: relative;
+	background: white url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png")!important;
+	background-repeat: no-repeat!important;
 	background-position: 97% center!important;
 	// background         : url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png");
 }

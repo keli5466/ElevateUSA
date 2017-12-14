@@ -1,0 +1,131 @@
+#history {}
+.normal_timeline {
+	display: none;
+	@include bp(M) {
+		display: block;
+	}
+}
+.mobile_timeline {
+	display: block;
+	@include bp(M) {
+		display: none;
+	}
+}
+.time_line {
+	// margin: 0;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	@include bp(phone) {
+		display: flex;
+	}
+	@include bp(tablet) {
+		margin: 0 auto;
+	}
+	.et_pb_column_empty {
+		@include bp(tablet) {
+			display: block;
+		}
+	}
+	.et_pb_column {
+		@include bp(phone) {
+			&:nth-child(even) {
+				// max-width: 75% !important;
+				margin: 0;
+				padding: 5%;
+			}
+			&:nth-child(odd) {
+				max-width: 15% !important;
+				margin: 0 !important;
+				@include bp(tablet) {
+					// float: right;
+					// width: 60%!important;
+					// text-align: left;
+				}
+			}
+		}
+		&:nth-child(2) {
+			@include bp(M) {
+				width: 5%!important;
+				margin: 0;
+				padding: 0 5%;
+			}
+		}
+		&:nth-child(odd) {
+			width: 45%!important;
+			margin: 0;
+			@include bp(tablet) {
+				// float: right;
+				// width: 60%!important;
+				// text-align: left;
+			}
+		}
+	}
+	.TL_text_block {
+		@include bp(tablet) {
+			// float: right;
+			// text-align: left!important;
+		}
+		h1 {
+			@extend .heading5;
+			color: white;
+		}
+		h2 {
+			@extend .heading5;
+			color: $orange;
+			font-weight: 600;
+		}
+		p {
+			color: white;
+		}
+	}
+	&:last-child {
+		.dot::before {
+			display: none;
+		}
+	}
+	&:nth-child(even) {
+		.TL_text_block {
+			text-align: left;
+			// @extend  .et-waypoint et_pb_animation_left;
+		}
+	}
+	&:nth-child(odd) {
+		.TL_text_block {
+			text-align: right;
+			@include bp(phone) {
+				text-align: left;
+			}
+		}
+	}
+}
+.dot {
+	position: relative;
+	height: 100%;
+	// &:last-child{
+	// 	 &:before{
+	// 		 background-color: blue;
+	// 	 }
+	// }
+	&:before {
+		content: "";
+		background: white;
+		position: absolute;
+		width: 2px;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+	&:after {
+		content: "";
+		background: white;
+		position: absolute;
+		width: 2em;
+		height: 2em;
+		border-radius: 100%;
+		// border: 2px solid #35a6cb;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%,0);
+	}
+}

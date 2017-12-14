@@ -32,7 +32,7 @@ jQuery(function($) {
 		// 		console.log("abc");
 		//
 		// 	}
-		// 
+		//
 		// });
 
 
@@ -54,7 +54,7 @@ jQuery(function($) {
 				}
 
 
-				if (window.location.pathname == "/sucess-stories/") {
+				if (window.location.pathname == "/success-stories/") {
 					console.log("that");
 					var newhash = location.hash.split('')[1];
 					$('.tile_click').removeClass('current');

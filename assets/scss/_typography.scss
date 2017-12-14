@@ -1,16 +1,14 @@
-
 body {
 	font-family: $gotham;
 	font-style: normal;
 	font-weight: 500;
 	color: $navy;
 	font-size: 1rem;
-	@include bp(phone){
-		font-size: .7rem;
-	}
+	// @include bp(phone) {
+	// 	font-size: 0.7rem;
+	// }
 }
-
-h1  {
+h1 {
 	font-size: 60px;
 	line-height: 1em;
 	@include bp(S) {
@@ -20,30 +18,24 @@ h1  {
 	// 	font-size: 35px;
 	// }
 }
-
 h2 {
 	font-size: 40px;
 	line-height: 1.1em;
-	h2{
-		margin-bottom: .5em;
-	}
+	margin-bottom: 0.5em;
 	@include bp(tablet) {
 		font-size: 36px;
 	}
-	@include bp(phone){
+	@include bp(phone) {
 		font-size: 25px;
 	}
-
 }
-
 h3 {
 	font-size: 30px;
-		line-height: 1.4em;
-		@include bp(S) {
-			font-size: 26px;
-		}
+	line-height: 1.4em;
+	@include bp(S) {
+		font-size: 26px;
+	}
 }
-
 h4 {
 	font-size: 25px;
 	font-weight: 400;
@@ -52,7 +44,6 @@ h4 {
 		font-size: 18px;
 	}
 }
-
 h5 {
 	font-size: 20px;
 	font-weight: 400;
@@ -61,28 +52,38 @@ h5 {
 		font-size: 20px;
 	}
 }
-
-
+.heading6 {
+	font-size: 14px;
+	@include bp(phone-tablet) {
+		font-size: 13px;
+	}
+}
+.smaller_h1 {
+	font-size: 55px;
+	@include bp(phone) {
+		font-size: 45px;
+	}
+}
 p {
 	font-size: 15px;
 	font-weight: 400;
-		line-height: 1.7em;
-		@include bp(S) {
-			font-size: 14px;
-		}
+	line-height: 1.7em;
+	@include bp(phone) {
+		font-size: 12px;
+	}
+	@include bp(tablet) {
+		font-size: 14px;
+	}
 }
 .et_pb_column_1_3 h1,
 .et_pb_column_1_4 h1 {
 	// @extend h1;
 }
-
 .et_pb_column_1_3 h2,
 .et_pb_column_1_4 h2 {
 	// @extend h2;
 }
-
-
-
+//
 .heading1 {
 	font-size: 60px;
 	line-height: 1em;
@@ -90,21 +91,16 @@ p {
 		font-size: 40px;
 	}
 }
-.smaller_h1{
-	font-size: 55px !important;
-}
 .heading2 {
 	font-size: 40px;
 	line-height: 1.1em;
 	@include bp(tablet) {
 		font-size: 36px;
 	}
-	@include bp(phone){
+	@include bp(phone) {
 		font-size: 25px;
 	}
-
 }
-
 .heading3 {
 	font-size: 30px;
 	line-height: 1.4em;
@@ -112,25 +108,18 @@ p {
 		font-size: 26px;
 	}
 }
-
 .heading4 {
 	font-size: 25px;
 	@include bp(tablet) {
 		font-size: 18px;
 	}
-	@include bp(phone){
+	@include bp(phone) {
 		font-size: 16px;
 	}
 }
 .heading5 {
 	font-size: 20px;
 	@include bp(phone-tablet) {
-		font-size: 20px;
-	}
-}
-.heading6 {
-	font-size: 14px;
-	@include bp(phone-tablet) {
-		font-size: 13px;
+		font-size: 16px;
 	}
 }
