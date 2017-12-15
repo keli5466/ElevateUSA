@@ -15,6 +15,7 @@
 	.et_mobile_menu {
 		border-top: none;
 		top: $mobile_header;
+		padding: 0 10%;
 		background-color: $orange!important;
 		li {
 			text-transform: uppercase;
@@ -24,6 +25,7 @@
 			a {
 				text-align: left;
 				color: white;
+				padding-left: 1%;
 				border-bottom: white 1px solid;
 			}
 		}

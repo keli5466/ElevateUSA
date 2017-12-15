@@ -114,8 +114,8 @@
 		.icon_grid {
 			width: 55%;
 			flex-flow: row wrap;
-			@include bp(xs) {
-				padding-top: 5%;
+			@include bp(phone) {
+				display: none;
 			}
 			.et_pb_blurb {
 				padding: 3%;

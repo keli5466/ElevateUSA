@@ -73,6 +73,7 @@
 		padding: 1em;
 		@include bp(phone) {
 			width: 50%;
+			border-radius: 5px;
 		}
 	}
 }

@@ -3,6 +3,9 @@
 	width: 100%;
 	height: 100vh;
 	padding: 0 !important;
+	// @include bp(phone) {
+	// 	height: 120vh;
+	// }
 	.et_pb_row {
 		float: right;
 		padding-left: 0 !important;
@@ -20,6 +23,10 @@
 			li {
 				list-style: disc !important;
 				font-size: 15px;
+				@include bp(phone) {
+					font-size: 12px;
+					line-height: 1.8em;
+				}
 			}
 		}
 		.et_pb_column_2_3 {
@@ -73,12 +80,15 @@
 					@include bp(phone) {
 						margin: 0.1em auto;
 					}
+					a,
 					img {
 						max-height: 5em;
 						line-height: 5em;
 						height: 100%;
+						width: 100%;
 						@include bp(phone) {
 							max-height: 3em;
+							width: 100%;
 							line-height: 3em;
 						}
 					}
@@ -122,9 +132,30 @@
 			}
 		}
 	}
+	// .btn_border {
+	// 	.et_pb_column:last-child {
+	// 		@include bp(phone) {
+	// 			text-align: left;
+	// 		}
+	// 	}
+	// }
+	// .left_cutoutbutton {
+	// 	.et_pb_button {
+	// 		@include bp(phone) {
+	// 			float: left;
+	// 		}
+	// 	}
+	// }
 	.et_pb_column:last-child {
 		@include bp(phone) {
-			text-align: center;
+			text-align: left;
 		}
 	}
+	// &:last-child {
+	// 	.et_pb_column:last-child {
+	// 		@include bp(phone) {
+	// 			text-align: left;
+	// 		}
+	// 	}
+	// }
 }
