@@ -19,7 +19,7 @@ if (! is_page_template('page-template-blank.php')) : ?>
 							Arvada, CO 80002<br />
 							<span style="color:white !important;">
 
-							Phone: 720-320-0252<br />
+							Phone: <a style="color:white!important;">720-320-0252 </a> <br />
 							</span>
 							<p>
 							</div>

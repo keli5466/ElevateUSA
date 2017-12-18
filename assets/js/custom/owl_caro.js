@@ -1,6 +1,22 @@
 jQuery(function($) {
+	function movedown() {
+
+		$('html, body').animate({
+			scrollTop: $("#custom_o").offset().top
+		}, 2000);
+
+	}
+
 
 	$(document).ready(function() {
+		// function movedown() {
+		//
+		// 	$('html, body').animate({
+		// 		scrollTop: $("#custom_o").offset().top
+		// 	}, 2000);
+		//
+		// }
+
 		$('.horizontal_slider').each(function() {
 			$(this).appendTo('.owl-carousel').wrapAll("<div class='item' />");
 		});
@@ -37,6 +53,19 @@ jQuery(function($) {
 
 
 		$(function() {
+			function movedown() {
+
+				$('html, body').animate({
+					scrollTop: $("#custom_o").offset().top
+				}, 2000);
+
+			}
+			$("#move_down").click(function() {
+				console.log("hel");
+				$('html, body').animate({
+					scrollTop: $("#custom_o").offset().top
+				}, 2000);
+			});
 			var hash = parseInt(location.hash.replace('#', ''), 10);
 
 

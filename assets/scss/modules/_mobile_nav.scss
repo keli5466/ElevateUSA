@@ -1,6 +1,8 @@
 .et_menu_container {
 	width: 100%;
-	padding: 0 10%;
+	@include bp(phone-tablet) {
+		padding: 0 10%;
+	}
 	height: $mobile_header;
 	@include bp(M) {
 		height: 100%;

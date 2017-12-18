@@ -18,14 +18,22 @@
 			width: 90% !important;
 			max-width: 90% !important;
 		}
+		h1 {
+			@include bp(phone) {
+				font-size: 30px;
+			}
+		}
 		ul {
 			padding-top: 1em;
+			@include bp(phone) {
+				padding-top: 0.5em;
+			}
 			li {
 				list-style: disc !important;
 				font-size: 15px;
 				@include bp(phone) {
 					font-size: 12px;
-					line-height: 1.8em;
+					line-height: 1.5em;
 				}
 			}
 		}

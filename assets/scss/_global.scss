@@ -1,6 +1,15 @@
 ul.car.hideme {
 	padding: 0;
 }
+#imagine {
+	h1 {
+		span {
+			@include bp(phone) {
+				font-size: 35px;
+			}
+		}
+	}
+}
 #stats {
 	.et_pb_blurb {
 		padding: 5%;
@@ -15,6 +24,11 @@ ul.car.hideme {
 @include bp(phone-tablet) {
 	.et_pb_section_0.et_pb_section {
 		padding: 0 !important;
+	}
+}
+@include bp(phone-tablet) {
+	.et_pb_column {
+		margin-bottom: 20px;
 	}
 }
 .et_pb_row {
