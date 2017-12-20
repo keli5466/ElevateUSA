@@ -2,12 +2,17 @@
 	display: none;
 	/*hidden on pageload*/
 	width: 100vw!important;
-	height: 100vh;
+	height: auto;
 	position: absolute;
 	padding-right: 20%;
+	@include bp(phone) {
+		padding-right: 0;
+		top: 10%;
+	}
 	left: 0;
+	bottom: 0;
 	z-index: 9;
-	top: 20%;
+	top: 15%;
 	background-color: #f2f2f2;
 	.et_pb_code {
 		position: absolute;
@@ -15,12 +20,19 @@
 		text-align: center;
 		top: -10%;
 		width: 100%;
+		@include bp(phone) {
+			top: 0;
+			right: 0;
+		}
 		.close {
 			// position: absolute;
 			// left: -10%;
 			font-size: 3em;
 			font-weight: 100;
 			color: grey;
+			@include bp(phone) {
+				font-size: 1em;
+			}
 		}
 	}
 	.new_wrap {
@@ -28,6 +40,17 @@
 		height: 100%;
 		display: block;
 		width: 80%;
+		position: relative;
+		@include bp(phone) {
+			width: 100%;
+			padding: 5%;
+			.et_pb_column {
+				position: static;
+				img {
+					padding-top: 10%;
+				}
+			}
+		}
 	}
 }
 .tile_hover {
@@ -135,12 +158,13 @@
 				@extend .heading6;
 				font-family: $gotham;
 				font-weight: 600;
-				line-height: 1.5em;
+				line-height: 1.3em;
 				text-align: right;
-				letter-spacing: 0.05em;
+				letter-spacing: 0.02em;
 				opacity: 0;
+				font-size: 12px;
 				position: absolute;
-				bottom: 5%;
+				bottom: 2%;
 				right: 5%;
 				filter: alpha(opacity=0);
 				transition: opacity 0.35s, transform 0.35s;

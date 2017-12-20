@@ -118,27 +118,70 @@
 .second_row {
 	padding: 5% 0;
 }
+.field.frequency.required.col-1-2 {
+	@include bp(M) {
+		margin-right: 5.5%;
+	}
+}
+.botton_row,
 .first_row,
 .second_row {
 	display: flex;
+	flex-wrap: wrap;
 	// padding: 0.5em 0;
 	@extend .et_pb_row;
+	margin: 0 auto;
 	.col-1-2 {
 		width: 47.25%;
+		@include bp(phone) {
+			width: 100%;
+		}
 		&:first-child {
-			margin-right: 5.5%;
+			@include bp(M) {
+				margin-right: 5.5%;
+			}
 		}
 	}
 }
+.donation-form .section.recurring {
+	@include bp(phone) {
+		padding-left: 0!important;
+	}
+}
+.field.checkbox.recurring {
+	padding: 5% 0;
+	height: auto;
+}
+span.showsup {
+	color: $orange;
+	@extend .heading5;
+	text-transform: capitalize;
+}
+span.arrow_down {
+	content: url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png")!important;
+}
+input#recurring {
+	display: none;
+}
+input#true-impact {
+	width: auto!important;
+	height: auto!important;
+}
+// .botton_row {
+// 	flex-wrap: wrap;
+// }
 .col {
 	flex: 1;
 }
 .col-1-2 {
 	// width: 50%;
 }
-.recurring {
-	display: none;
+.col-1 {
+	width: 100%;
 }
+// .recurring {
+// 	display: none;
+// }
 .donation-form .field .required-star {
 	display: none!important;
 }
@@ -156,6 +199,7 @@
 	textarea {
 		min-height: 2em;
 		height: 2em;
+		box-sizing: content-box;
 		width: 100%!important;
 		max-width: 100%!important;
 		background: white;

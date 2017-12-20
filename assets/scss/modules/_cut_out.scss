@@ -132,7 +132,7 @@
 		#float_img {
 			position: absolute;
 			bottom: 0;
-			width: 45%;
+			width: 50%;
 			right: 0;
 			padding: 0;
 			@include bp(phone-tablet) {
@@ -166,4 +166,9 @@
 	// 		}
 	// 	}
 	// }
+}
+.advent_img {
+	#float_img {
+		width: 65%!important;
+	}
 }

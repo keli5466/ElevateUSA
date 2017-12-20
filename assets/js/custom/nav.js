@@ -133,7 +133,23 @@ jQuery(function($) {
 
 
 jQuery(function($) {
+
 	$(document).ready(function() {
+		$('#recurring').click(function(event) {
+			console.log("f");
+			$('span.arrow_down').addClass("down");
+			if ($('span.arrow_down').hasClass("down")) {
+				console.log("f");
+				$(this).removeClass("down");
+			}
+		});
+		$('#move_down').click(function(event) {
+			console.log("hel");
+			$('html, body').animate({
+				scrollTop: $('#kelly').offset().top
+			}, 500);
+			event.preventDefault();
+		});
 		$('#AZ').click(function(event) {
 			$('html, body').animate({
 				scrollTop: $('#Ariz').offset().top
