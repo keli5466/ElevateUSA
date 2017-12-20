@@ -26,7 +26,7 @@ if (! is_page_template('page-template-blank.php')) : ?>
 								<p class="terms">©2017 Elevate, USA all right reserved. Contact Us with questions.</p>
 						</div>
 						<div class="col-1-3">
-							<img style="height:100%; width:100%;" src="http://devel.elevatetheusa.org/wp-content/uploads/2017/12/elevate_logo_and_tag.svg">
+							<img style="height:100%;" src="http://devel.elevatetheusa.org/wp-content/uploads/2017/12/elevate_logo_and_tag.svg">
 
 						</div>
 
