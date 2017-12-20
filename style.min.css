@@ -13,6 +13,8 @@ Template: Divi
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */*{-webkit-box-sizing:border-box;box-sizing:border-box}
+.et_pb_image_wrap{width:100% !important}
+img{width:100%}
 ul.car.hideme{padding:0}
 #stats .et_pb_blurb{padding:5%}
 .et_pb_row,.form_title.outlier,.botton_row,.first_row,.second_row{height:100%;width:90%}
@@ -116,7 +118,7 @@ select{float:left;appearance:none;-webkit-appearance:none;-moz-appearance:none;-
 .inner_second_second .side_icon .icon_grid{width:55%;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}
 .inner_second_second .side_icon .icon_grid .et_pb_blurb{padding:3%;margin-top:0;-ms-flex-preferred-size:50%;flex-basis:50%;text-align:center}
 .inner_second_second .side_icon .icon_grid .et_pb_blurb .et_pb_main_blurb_image{margin-bottom:8%}
-.inner_second_second .side_icon .icon_grid .et_pb_blurb .et_pb_main_blurb_image img{max-height:4.5em}
+.inner_second_second .side_icon .icon_grid .et_pb_blurb .et_pb_main_blurb_image img{max-height:4.5em;width:100%}
 .inner_second_second .side_icon .icon_grid .et_pb_blurb h4{font-size:1em}
 .inner_second_second .side_icon .icon_grid:first-child{-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0}
 .inner_second_second .side_icon .icon_grid:first-child .et_pb_text{width:100%;color:#2d383a}
