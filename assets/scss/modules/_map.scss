@@ -1,65 +1,58 @@
-.location_map{
-	.et_pb_code{
-
-	text-align: center;
-	svg{
-		width: 90%;
-		padding: 5%;
-		margin: 0 auto;
+.location_map {
+	.et_pb_code {
+		text-align: center;
+		svg {
+			width: auto;
+			padding: 5%;
+			margin: 0 auto;
+			min-height: 30em;
+		}
 	}
 }
-
-}
-
 // .dot::before{
 //
 // }
-g.State{
+g.State {
 	.bg_state {
-			fill-opacity: 1;
-				transition: .3s ease-out;
-
+		fill-opacity: 1;
+		transition: 0.3s ease-out;
 	}
-	.state_name{
+	.state_name {
 		opacity: 0;
-		transition: .3s ease-out;
+		transition: 0.3s ease-out;
 	}
-	g#pin_group{
+	g#pin_group {
 		transform: translateY(0);
-		transition: .3s ease-out;
-			transform-origin: 50% 50%;
+		transition: 0.3s ease-out;
+		transform-origin: 50% 50%;
 		// position: relative;
 	}
-
-
 	&:hover {
-		g#pin_group{
-		// animation: movePin .5s ease-out normal;
-		transform: translateY(-5px) scale(1.2);
-		transition: .5s ease;
-		// transform: scale(1.1);
-		transform-origin: 50% 50%;
-		// filter: url(#f1);
-
-	}
-	.pin{
-		// transform: scale(1.1);
-		// transform-origin: 50% 50%;
-			transition: .3s ease-in;
-	}
-	.bg_state{
+		g#pin_group {
+			// animation: movePin .5s ease-out normal;
+			transform: translateY(-5px) scale(1.1);
+			transition: 0.5s ease;
+			// transform: scale(1.1);
+			transform-origin: 50% 50%;
+			// filter: url(#f1);
+		}
+		.pin {
+			// transform: scale(1.1);
+			// transform-origin: 50% 50%;
+			transition: 0.3s ease-in;
+		}
+		.bg_state {
 			fill-opacity: 0.3;
-				transition: .3s ease-in;
-	}
+			transition: 0.3s ease-in;
+		}
 		.state_name {
 			// visibility: visible;
 			opacity: 1;
-			transition: .3s ease-in;
+			transition: 0.3s ease-in;
 		}
-}
-
-// @keyframes movePin{
-// 			transform: translateY(-100px);
-//
-// }
+	}
+	// @keyframes movePin{
+	// 			transform: translateY(-100px);
+	//
+	// }
 }

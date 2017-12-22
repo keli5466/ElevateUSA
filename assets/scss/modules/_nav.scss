@@ -79,7 +79,7 @@ div#et-top-navigation {
 					width: 100%;
 					// padding-right: .5em;
 					line-height: 2em;
-					width: 20em;
+					// width: 20em;
 					&:nth-child(1) {
 						width: 8em;
 					}
@@ -90,16 +90,16 @@ div#et-top-navigation {
 						width: 10em;
 					}
 					&:nth-child(4) {
-						width: 13em;
+						width: 13.5em;
 					}
 					&:nth-child(5) {
 						width: 11em;
 					}
 					&:nth-child(6) {
-						width: 14em;
+						width: 14.5em;
 					}
 					&:nth-child(7) {
-						width: 13em;
+						width: 13.5em;
 					}
 					&:nth-child(8) {
 						width: 10em;
@@ -111,7 +111,7 @@ div#et-top-navigation {
 						color: white;
 						margin: 0 !important;
 						padding: 0 !important;
-						width: auto;
+						width: 100%;
 						transform: translateY(-50%);
 						&:hover {
 							opacity: 1;

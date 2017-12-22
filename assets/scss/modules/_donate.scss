@@ -43,8 +43,12 @@
 				display: table-cell;
 				text-align: left;
 				vertical-align: middle;
-				font-size: 25px;
-				line-height: 73px;
+				font-size: 100%;
+				padding: 1em;
+				// font-size: 25px;
+				// line-height: 73px;
+				border: #8e8e8e 1px solid;
+				border-right: #8e8e8e 2px solid;
 				text-indent: 5%;
 				@include bp(phone) {
 					width: 50%;
@@ -66,6 +70,8 @@
 		text-align: center;
 		text-transform: uppercase;
 		background: $orange;
+		margin: 0 !important;
+		border: $orange solid 1px;
 		color: white;
 		vertical-align: middle;
 		float: right;
