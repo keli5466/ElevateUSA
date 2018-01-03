@@ -9,14 +9,14 @@
 			.et_pb_toggle_title {
 				&:before {
 					transform: rotate(180deg);
-					content: url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png") !important;
+					content: url("/wp-content/uploads/2017/12/arrow_down.png") !important;
 				}
 			}
 		}
 		&_close {
 			.et_pb_toggle_title {
 				&:before {
-					content: url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png") !important;
+					content: url("/wp-content/uploads/2017/12/arrow_down.png") !important;
 				}
 			}
 		}

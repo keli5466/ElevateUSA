@@ -1,6 +1,13 @@
 a.phone {
 	color: white!important;
 }
+a[href^="tel:"] {
+	color: white!important;
+	text-decoration: none;
+}
+.footer_logo {
+	height: 100%;
+}
 .wrapper {
 	// width : 80%;
 	margin: 0 auto;
@@ -167,7 +174,7 @@ span.showsup {
 	// text-transform: capitalize;
 }
 span.arrow_down {
-	content: url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png")!important;
+	content: url("/wp-content/uploads/2017/12/arrow_down.png")!important;
 }
 input#recurring {
 	display: none;
@@ -256,7 +263,7 @@ select {
 	-moz-appearance: none;
 	-ms-appearance: none;
 	position: relative;
-	background: white url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png")!important;
+	background: white url("/wp-content/uploads/2017/12/arrow_down.png")!important;
 	background-repeat: no-repeat!important;
 	background-position: 97% center!important;
 	// background         : url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png");

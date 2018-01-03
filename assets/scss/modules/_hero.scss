@@ -7,6 +7,8 @@
 		}
 		@include bp(desktop) {
 			height: 100vh;
+			width: 100vw;
+			max-width: 100vw;
 		}
 		.header-content {
 			margin: 0 auto;
@@ -24,13 +26,14 @@
 				margin-bottom: 5em;
 				position: absolute;
 				top: 5%;
-				left: -9%;
+				left: 50px;
 				@include bp(phone-tablet) {
 					display: none;
 				}
 			}
 			h1 {
 				color: white;
+				padding: 0 5%;
 				font-family: $baron;
 			}
 			@include bp(M) {

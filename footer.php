@@ -19,14 +19,14 @@ if (! is_page_template('page-template-blank.php')) : ?>
 							Arvada, CO 80002<br />
 							<span>
 
-							Phone: <a class="phone">720-320-0252 </a> <br />
+							Phone: <a class="phone" href="tel:1-720-320-0252">720-320-0252 </a> <br />
 							</span>
 							<p>
 							</div>
 								<p class="terms">©2017 Elevate, USA all right reserved. Contact Us with questions.</p>
 						</div>
 						<div class="col-1-3">
-							<img style="height:100%;" src="/wp-content/uploads/2017/12/elevate_logo_and_tag.svg">
+							<img class="footer_logo" src="/wp-content/uploads/2017/12/elevate_logo_and_tag.svg">
 
 						</div>
 

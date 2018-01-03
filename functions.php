@@ -21,7 +21,7 @@ function scripts_and_styles()
     wp_enqueue_script('jquery');
     wp_register_script('owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js');
     wp_enqueue_script('owl-carousel');
-    wp_register_script('e-custom', get_stylesheet_directory_uri() . '/e-custom.js');
+    wp_register_script('e-custom', get_stylesheet_directory_uri() . '/e-custom.min.js');
     wp_enqueue_script('e-custom');
 
     // wp_register_script( 'font-awesome', 'https://use.fontawesome.com/14bf375dad.js' );
