@@ -9,9 +9,6 @@
 		}
 	}
 }
-// .dot::before{
-//
-// }
 g.State {
 	.bg_state {
 		fill-opacity: 1;
@@ -29,16 +26,11 @@ g.State {
 	}
 	&:hover {
 		g#pin_group {
-			// animation: movePin .5s ease-out normal;
 			transform: translateY(-5px) scale(1.1);
 			transition: 0.5s ease;
-			// transform: scale(1.1);
 			transform-origin: 50% 50%;
-			// filter: url(#f1);
 		}
 		.pin {
-			// transform: scale(1.1);
-			// transform-origin: 50% 50%;
 			transition: 0.3s ease-in;
 		}
 		.bg_state {
@@ -51,8 +43,4 @@ g.State {
 			transition: 0.3s ease-in;
 		}
 	}
-	// @keyframes movePin{
-	// 			transform: translateY(-100px);
-	//
-	// }
 }
