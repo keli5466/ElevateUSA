@@ -45,6 +45,7 @@ p{font-size:15px;font-weight:400;line-height:1.7em}
 .heading3,#ourmission h2{font-size:30px;line-height:1.4em}
 .heading4{font-size:25px}
 .heading5,.form_title,span.showsup,.inner_second_second .no_icon .et_pb_column:last-child .et_pb_text ol li,.time_line .TL_text_block h1,.time_line .TL_text_block h2{font-size:20px}
+a.phone{color:white !important}
 .wrapper{margin:0 auto}
 .wrapper .radio-group{display:table;width:100%;font-family:"Gotham Rounded";font-size:1.5em !important;border:#8e8e8e 1px solid;overflow:hidden}
 .wrapper .radio-group .row_table{height:50px;display:table-row}
@@ -63,7 +64,7 @@ p{font-size:15px;font-weight:400;line-height:1.7em}
 .botton_row,.first_row,.second_row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 auto}
 .botton_row .col-1-2,.first_row .col-1-2,.second_row .col-1-2{width:47.25%}
 .field.checkbox.recurring{padding:5% 0;height:auto}
-span.showsup{color:#e8773d;text-transform:capitalize}
+span.showsup{color:#e8773d}
 span.arrow_down{content:url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png") !important}
 input#recurring{display:none}
 input#true-impact{width:auto !important;height:auto !important}

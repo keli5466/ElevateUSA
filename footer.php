@@ -17,16 +17,16 @@ if (! is_page_template('page-template-blank.php')) : ?>
 							5310 Ward Road<br />
 							Suite G-05<br />
 							Arvada, CO 80002<br />
-							<span style="color:white !important;">
+							<span>
 
-							Phone: <a style="color:white!important;">720-320-0252 </a> <br />
+							Phone: <a class="phone">720-320-0252 </a> <br />
 							</span>
 							<p>
 							</div>
 								<p class="terms">©2017 Elevate, USA all right reserved. Contact Us with questions.</p>
 						</div>
 						<div class="col-1-3">
-							<img style="height:100%;" src="http://devel.elevatetheusa.org/wp-content/uploads/2017/12/elevate_logo_and_tag.svg">
+							<img style="height:100%;" src="/wp-content/uploads/2017/12/elevate_logo_and_tag.svg">
 
 						</div>
 

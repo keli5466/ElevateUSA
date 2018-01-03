@@ -1,3 +1,6 @@
+a.phone {
+	color: white!important;
+}
 .wrapper {
 	// width : 80%;
 	margin: 0 auto;
@@ -161,7 +164,7 @@
 span.showsup {
 	color: $orange;
 	@extend .heading5;
-	text-transform: capitalize;
+	// text-transform: capitalize;
 }
 span.arrow_down {
 	content: url("http://devel.elevatetheusa.org/wp-content/uploads/2017/12/arrow_down.png")!important;
