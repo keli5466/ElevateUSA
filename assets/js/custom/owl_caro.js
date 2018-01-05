@@ -90,10 +90,12 @@ jQuery(function($) {
 
 		$('.owl-carousel').owlCarousel({
 			items: 1,
-			loop: false,
+			loop: true,
 			center: true,
 			margin: 0,
 			URLhashListener: true,
+			autoplay: true,
+			autoplayTimeout: 2500,
 			autoplayHoverPause: true,
 			startPosition: 'URLHash'
 		});
